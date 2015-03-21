@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+.parto
+ {
+	background:#0084FF;
+	color:#FFFFFF;
+	display:inline-block;
+	font:size:1.25em;
+	margin:20px;
+	padding:10px 0px;
+	text-align:center;
+	width:200px;
+	text-decoration;
+	box-shadow:0px 3px 0px #0316AA;
+}
+
+
