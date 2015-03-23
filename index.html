@@ -20,28 +20,29 @@
 
 <div data-role="page" id="page" data-theme="a">
 	<div data-role="header" data-theme="a">
-    		<h1>CALCULADORA</h1>
+    		<h1>EDAD GESTACIONAL</h1>
      </div>
       <div data-role="content" data-theme="a">
      	<ul data-role="listview">
-        <li><a href="#pagparto" data-transition="slidedown">FECHA DE PARTO</a></li>
-        </ul>
+        <li><a href="#pagparto" data-transition="slidedown">FECHA PROBABLE DE PARTO PARTO</a></li>
+         <li><a href="#pagcapurro" data-transition="slidedown">CAPURRO</a></li>
+         </ul>
         </div>
-  </div>
+    <div data-role="footer" data-theme="a">
+   	<h4>AREA DE SALUD</h4>
+   </div>
+  		</div>
 
 <div data-role="page" id="pagparto" data-add-back-btn="true" data-theme="a">
 	<div data-role="header" data-theme="a">
     
-    		<h1>FECHA DE PARTO</h1>
+    		<h1>FECHA PROBABLE DE PARTO PARTO</h1>
      </div>
-  
- 
-        
-  
+       
    <div>
      <center>
-     <h3>DIA</h3>
-     <SELECT NAME="selCombo" SIZE=1> 
+     <h3>FECHA DE LA ULTIMA MESTRUACION (FUM)</h3>
+     <SELECT NAME="selCombo" SIZE=1 id="dia"> 
 <OPTION VALUE="">1</OPTION>
 <OPTION VALUE="">2</OPTION>
 <OPTION VALUE="">3</OPTION>
@@ -76,8 +77,7 @@
  
 </SELECT> 
 
- <h3>MES</h3>
-<SELECT NAME="selCombo" SIZE=1> 
+ <SELECT NAME="selCombo" SIZE=1 id="mes"> 
 <OPTION VALUE="">ENERO</OPTION>
 <OPTION VALUE="">FEBRERO</OPTION>
 <OPTION VALUE="">MARZO</OPTION>
@@ -92,9 +92,7 @@
 <OPTION VALUE="">DICIEMBRE</OPTION> 
 </SELECT> 
 
- <h3>AÑO</h3>
- 
-<SELECT NAME="selCombo" SIZE=1> 
+<SELECT NAME="selCombo" SIZE=1 id="yyyy"> 
 <OPTION VALUE="">2014</OPTION>
 <OPTION VALUE="">2015</OPTION>
 <OPTION VALUE="">2016</OPTION>
@@ -111,16 +109,177 @@
     </div>
    
     <div>
-      <input type="button" name="calcular" id="calcular1" value="CALCULAR">
+    
+     
+  </div>
+  
+  
+  <div>
+    <label for="textfield">RESULTADO:</label>
+    <input type="text" name="textfield" id="txtres">
   </div>
   
   
   <div data-role="footer" data-theme="a">
-        	<h4>SALUD</h4>
+   	<h4>AREA DE SALUD</h4>
    </div>
   </div>
   
-
-
+  
+   <div data-role="page" id="pagcapurro" data-add-back-btn="true" data-theme="a">
+	<div data-role="header" data-theme="a">
+    
+    		<h1>CAPURRO</h1>
+     </div>
+      <div data-role="content" data-theme="a">
+     	<ul data-role="listview">
+        <li><a href="#pagsano" data-transition="slidedown">SANO</a></li>
+         <li><a href="#pagdep" data-transition="slidedown">DEPRIMIDO</a></li>
+         </ul>
+        </div>
+        
+      <div data-role="footer" data-theme="a">
+   	<h4>AREA DE SALUD</h4>
+   </div>
+   
+     </div>
+  </center>
+  
+  <div data-role="page" id="pagsano" data-add-back-btn="true" data-theme="a">
+	<div data-role="header" data-theme="a">
+        		<h1>CAPURRO</h1>
+     </div>
+     
+<center>
+     <div>
+     <h4>FORMA DE LA OREJA (PABELLÒN) </h4>
+      <SELECT NAME="selCombo" SIZE=1 id="forma"> 
+			<OPTION VALUE="">Aplanada, sin incurvaciòn</OPTION>
+			<OPTION VALUE="">Borde superior parcialmente incurvado</OPTION>
+			<OPTION VALUE="">Todo el borde sup incurvado</OPTION>
+			<OPTION VALUE="">Pabellòn totalmente incurvado</OPTION> 
+	</SELECT>
+     </div>
+     
+      <div>
+     <h4>TAMAÑO DE GLÀNDULA MAMARIA</h4>
+      <SELECT NAME="selCombo" SIZE=1 id="forma"> 
+			<OPTION VALUE="">No palpable</OPTION>
+			<OPTION VALUE="">Palpable menor de 5 mm</OPTION>
+			<OPTION VALUE="">Palpable entre 5 y 10 mm</OPTION>
+			<OPTION VALUE="">Palpable mayor de 10 mm</OPTION> 
+	</SELECT>
+     </div>
+     
+         <div>
+     <h4>TEXTURA DE LA PIEL</h4>
+      <SELECT NAME="selCombo" SIZE=1 id="forma"> 
+			<OPTION VALUE="">Muy fina gelatinosa</OPTION>
+			<OPTION VALUE="">Fina lisa</OPTION>
+			<OPTION VALUE="">Mas gruesa discreta descamaciòn superficial</OPTION>
+			<OPTION VALUE="">Gruesa grietas superficiales descamaciòn d manos y pies</OPTION> 
+            <OPTION VALUE="">Gruesa grietas profundas apergaminadas</OPTION> 
+	</SELECT>
+     </div>
+     
+     <div>
+     <h4>PLIEGUES PLANTARES</h4>
+      <SELECT NAME="selCombo" SIZE=1 id="forma"> 
+			<OPTION VALUE="">Sin pliegues</OPTION>
+			<OPTION VALUE="">Marcas mal definidas en la mitad anterior</OPTION>
+			<OPTION VALUE="">Marcas bien definidas en la 1/2 anterior, surcos en 1/2 anteriorç</OPTION>
+			<OPTION VALUE="">Gruesa grietas superficiales descamaciòn d manos y pies</OPTION> 
+            <OPTION VALUE="">Gruesa grietas profundas apergaminadas</OPTION> 
+	</SELECT>
+     </div>
+      <div data-role="footer" data-theme="a">
+   	<h4>AREA DE SALUD</h4>
+   </div>
+     </div>
+     
+</center>
+     
+       <div data-role="page" id="pagdep" data-add-back-btn="true" data-theme="a">
+	<div data-role="header" data-theme="a">
+        		<h1>CAPURRO</h1>
+     </div>
+ <center>
+       <div>
+     <h5>FORMA DE LA OREJA (PABELLÒN) </h5>
+      <SELECT NAME="selCombo" SIZE=1 id="forma"> 
+			<OPTION VALUE="">Aplanada, sin incurvaciòn</OPTION>
+			<OPTION VALUE="">Borde superior parcialmente incurvado</OPTION>
+			<OPTION VALUE="">Todo el borde sup incurvado</OPTION>
+			<OPTION VALUE="">Pabellòn totalmente incurvado</OPTION> 
+	</SELECT>
+     </div>
+     
+     <div>
+     <h5>TAMAÑO DE GLÀNDULA MAMARIA</h5>
+      <SELECT NAME="selCombo" SIZE=1 id="forma"> 
+			<OPTION VALUE="">No palpable</OPTION>
+			<OPTION VALUE="">Palpable menor de 5 mm</OPTION>
+			<OPTION VALUE="">Palpable entre 5 y 10 mm</OPTION>
+			<OPTION VALUE="">Palpable mayor de 10 mm</OPTION> 
+	</SELECT>
+     </div>
+     
+     <div>
+     <h5>FORMACIÒN DEL PEZON</h5>
+      <SELECT NAME="selCombo" SIZE=1 id="forma"> 
+			<OPTION VALUE="">Apenas visible sin areola</OPTION>
+			<OPTION VALUE="">Diametro menor de 7.5 mm Areola lisa y chata</OPTION>
+			<OPTION VALUE="">Diametro mayor de 7.5 mm Areola Punteada (Borde levantado)</OPTION>
+			<OPTION VALUE="">Diametro mayor de 7.5 mm Areola Punteada (Borde no levantado)</OPTION> 
+	</SELECT>
+     </div>
+     
+         <div>
+     <h5>TEXTURA DE LA PIEL</h5>
+      <SELECT NAME="selCombo" SIZE=1 id="forma"> 
+			<OPTION VALUE="">Muy fina gelatinosa</OPTION>
+			<OPTION VALUE="">Fina lisa</OPTION>
+			<OPTION VALUE="">Mas gruesa discreta descamaciòn superficial</OPTION>
+			<OPTION VALUE="">Gruesa grietas superficiales descamaciòn d manos y pies</OPTION> 
+            <OPTION VALUE="">Gruesa grietas profundas apergaminadas</OPTION> 
+	</SELECT>
+     </div>
+     
+     <div>
+     <h5>PLIEGUES PLANTARES</h5>
+      <SELECT NAME="selCombo" SIZE=1 id="forma"> 
+			<OPTION VALUE="">Sin pliegues</OPTION>
+			<OPTION VALUE="">Marcas mal definidas en la mitad anterior</OPTION>
+			<OPTION VALUE="">Marcas bien definidas en la 1/2 anterior, surcos en 1/2 anteriorç</OPTION>
+			<OPTION VALUE="">Gruesa grietas superficiales descamaciòn d manos y pies</OPTION> 
+            <OPTION VALUE="">Gruesa grietas profundas apergaminadas</OPTION> 
+	</SELECT>
+     </div>
+     
+      <div>
+     <h5>SIGNO DE LA BUFANDA</h5>
+      <SELECT NAME="selCombo" SIZE=1 id="forma"> 
+			<OPTION VALUE="">El codo alcanza la linea auxiliar del lado opuesto</OPTION>
+			<OPTION VALUE="">Codo entre la linea auxiliar anterior</OPTION>
+			<OPTION VALUE="">El codo alcanza la linea media</OPTION>
+			<OPTION VALUE="">El codo alcanza la linea media</OPTION> 
+           	</SELECT>
+     </div>
+     
+      <div>
+     <h5>CABEZA EN GOTA</h5>
+      <SELECT NAME="selCombo" SIZE=1 id="forma"> 
+			<OPTION VALUE="">Deflexiòn total de la cabeza àlgunos mayores de 270ª</OPTION>
+			<OPTION VALUE="">Control cefàlico parcial, angulo entre 180ª-270ª</OPTION>
+			<OPTION VALUE="">Capaz de mantener cabeza en linea con el cuerpo 180ª</OPTION>
+			<OPTION VALUE="">Lleva la cabeza anterior al cuerpo angulo menor 180ª</OPTION> 
+           	</SELECT>
+     </div>
+      <div data-role="footer" data-theme="a">
+   	<h4>AREA DE SALUD</h4>
+   </div>
+     </div>
+ </center>    
+     
 </body>
 </html>
