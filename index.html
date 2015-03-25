@@ -24,7 +24,7 @@
      </div>
       <div data-role="content" data-theme="a">
      	<ul data-role="listview">
-        <li><a href="#pagparto" data-transition="slidedown">FECHA PROBABLE DE PARTO PARTO</a></li>
+        <li><a href="#pagparto" data-transition="slidedown">FECHA PROBABLE DE PARTO</a></li>
          <li><a href="#pagcapurro" data-transition="slidedown">CAPURRO</a></li>
          </ul>
         </div>
@@ -36,90 +36,131 @@
 <div data-role="page" id="pagparto" data-add-back-btn="true" data-theme="a">
 	<div data-role="header" data-theme="a">
     
-    		<h1>FECHA PROBABLE DE PARTO PARTO</h1>
+    		<h1>FECHA PROBABLE DE PARTO</h1>
      </div>
        
    <div>
      <center>
-     <h3>FECHA DE LA ULTIMA MESTRUACION (FUM)</h3>
-     <SELECT NAME="selCombo" SIZE=1 id="dia"> 
-<OPTION VALUE="">1</OPTION>
-<OPTION VALUE="">2</OPTION>
-<OPTION VALUE="">3</OPTION>
-<OPTION VALUE="">4</OPTION> 
-<OPTION VALUE="">5</OPTION>
-<OPTION VALUE="">6</OPTION>
-<OPTION VALUE="">7</OPTION>
-<OPTION VALUE="">8</OPTION>
-<OPTION VALUE="">9</OPTION>
-<OPTION VALUE="">10</OPTION>
-<OPTION VALUE="">11</OPTION>
-<OPTION VALUE="">12</OPTION> 
-<OPTION VALUE="">13</OPTION>
-<OPTION VALUE="">14</OPTION>
-<OPTION VALUE="">15</OPTION>
-<OPTION VALUE="">16</OPTION>
-<OPTION VALUE="">17</OPTION>
-<OPTION VALUE="">18</OPTION>
-<OPTION VALUE="">19</OPTION>
-<OPTION VALUE="">20</OPTION>
-<OPTION VALUE="">21</OPTION>
-<OPTION VALUE="">22</OPTION>
-<OPTION VALUE="">23</OPTION>
-<OPTION VALUE="">24</OPTION>
-<OPTION VALUE="">25</OPTION>
-<OPTION VALUE="">26</OPTION>
-<OPTION VALUE="">27</OPTION>
-<OPTION VALUE="">28</OPTION>
-<OPTION VALUE="">29</OPTION>
-<OPTION VALUE="">30</OPTION>
-<OPTION VALUE="">31</OPTION>
- 
-</SELECT> 
-
- <SELECT NAME="selCombo" SIZE=1 id="mes"> 
-<OPTION VALUE="">ENERO</OPTION>
-<OPTION VALUE="">FEBRERO</OPTION>
-<OPTION VALUE="">MARZO</OPTION>
-<OPTION VALUE="">ABRIL</OPTION> 
-<OPTION VALUE="">MAYO</OPTION>
-<OPTION VALUE="">JUNIO</OPTION>
-<OPTION VALUE="">JULIO</OPTION>
-<OPTION VALUE="">AGOSTO</OPTION>
-<OPTION VALUE="">SEPTIEMBRE</OPTION>
-<OPTION VALUE="">OCTUBRE</OPTION>
-<OPTION VALUE="">NOVIEMBRE</OPTION>
-<OPTION VALUE="">DICIEMBRE</OPTION> 
-</SELECT> 
-
-<SELECT NAME="selCombo" SIZE=1 id="yyyy"> 
-<OPTION VALUE="">2014</OPTION>
-<OPTION VALUE="">2015</OPTION>
-<OPTION VALUE="">2016</OPTION>
-<OPTION VALUE="">2017</OPTION> 
-<OPTION VALUE="">2018</OPTION>
-<OPTION VALUE="">2019</OPTION>
-<OPTION VALUE="">2020</OPTION>
-</SELECT>
-<br>
-<br>
+     <h3>FECHA DE LA ULTIMA MENSTRUACION (FUM)</h3>
+     
+     <form name="dd">
+       <SELECT NAME="dd" id="dd" class="form_select"> 
+           <p>
+         <OPTION VALUE="1">1</OPTION>
+         <OPTION VALUE="2">2</OPTION>
+         <OPTION VALUE="3">3</OPTION>
+         <OPTION VALUE="4">4</OPTION> 
+         <OPTION VALUE="5">5</OPTION>
+         <OPTION VALUE="6">6</OPTION>
+         <OPTION VALUE="7">7</OPTION>
+         <OPTION VALUE="8">8</OPTION>
+         <OPTION VALUE="9">9</OPTION>
+         <OPTION VALUE="10">10</OPTION>
+         <OPTION VALUE="11">11</OPTION>
+         <OPTION VALUE="12">12</OPTION> 
+         <OPTION VALUE="13">13</OPTION>
+         <OPTION VALUE="14">14</OPTION>
+         <OPTION VALUE="15">15</OPTION>
+         <OPTION VALUE="16">16</OPTION>
+         <OPTION VALUE="17">17</OPTION>
+         <OPTION VALUE="18">18</OPTION>
+         <OPTION VALUE="19">19</OPTION>
+         <OPTION VALUE="20">20</OPTION>
+         <OPTION VALUE="21">21</OPTION>
+         <OPTION VALUE="22">22</OPTION>
+         <OPTION VALUE="23">23</OPTION>
+         <OPTION VALUE="24">24</OPTION>
+         <OPTION VALUE="25">25</OPTION>
+         <OPTION VALUE="26">26</OPTION>
+         <OPTION VALUE="27">27</OPTION>
+         <OPTION VALUE="28">28</OPTION>
+         <OPTION VALUE="29">29</OPTION>
+         <OPTION VALUE="30">30</OPTION>
+         <OPTION VALUE="31">31</OPTION>
+         
+       </SELECT>
+       </p>
+       
+       </form>
+       
+       <form name="mm">
+       <SELECT NAME="mm" id="mm" class="form_select"> 
+           <p>
+         <OPTION VALUE="1">ENERO</OPTION>
+         <OPTION VALUE="2">FEBRERO</OPTION>
+         <OPTION VALUE="3">MARZO</OPTION>
+         <OPTION VALUE="4">ABRIL</OPTION> 
+         <OPTION VALUE="5">MAYO</OPTION>
+         <OPTION VALUE="6">JUNIO</OPTION>
+         <OPTION VALUE="7">JULIO</OPTION>
+         <OPTION VALUE="8">AGOSTO</OPTION>
+         <OPTION VALUE="9">SEPTIEMBRE</OPTION>
+         <OPTION VALUE="10">OCTUBRE</OPTION>
+         <OPTION VALUE="11">NOVIEMBRE</OPTION>
+         <OPTION VALUE="12">DICIEMBRE</OPTION>
+         </p>
+         </SELECT>
+         </form>
+         
+      
+       <SELECT NAME="yyyy" id="yyyy" class="form_yyyy"> 
+         <OPTION VALUE="">2014</OPTION>
+         <OPTION VALUE="">2015</OPTION>
+         <OPTION VALUE="">2016</OPTION>
+         <OPTION VALUE="">2017</OPTION> 
+         <OPTION VALUE="">2018</OPTION>
+         <OPTION VALUE="">2019</OPTION>
+         <OPTION VALUE="">2020</OPTION>
+       </SELECT>
+  </p>
+     
+    <div>
+    
+    </div>
+    
      </center>
      
 
     </div>
-   
-    <div>
     
-     
-  </div>
-  
-  
-  <div>
-    <label for="textfield">RESULTADO:</label>
-    <input type="text" name="textfield" id="txtres">
-  </div>
-  
-  
+    
+    
+    <script>
+	function operaciones()
+	{
+		var suma;
+			var dia=document.getElementById("dd").value;
+			var mes=document.getElementById("mm").value;
+			
+			suma=(parseInt(dia)+parseInt(mes));
+			
+					
+	//	alert(suma)
+		document.getElementById("res").innerHTML = suma;
+		
+		
+	}
+    </script>
+       
+    
+    
+    
+<center>
+<form>
+<input type="button" onClick="operaciones()" value="CALCULAR">
+</form>
+
+<br>
+
+<form>
+<div id="operaciones"></div>
+</form>
+
+<label> REESULTADO</label>
+<div id="res"></div>
+
+</center>
+<br>  
   <div data-role="footer" data-theme="a">
    	<h4>AREA DE SALUD</h4>
    </div>

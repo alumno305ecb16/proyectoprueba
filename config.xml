@@ -10,8 +10,10 @@
     <name>PROYECTO</name>
 
     <description>
-       APLICACION SOBRE LA SALID
+       APLICACION AREA DE LA SALID
     </description>
+	
+	
 
     <preference name="phonegap-version" value="3.1.0" />
 	
