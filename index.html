@@ -147,18 +147,7 @@
 		me= parseInt(mes); 
 		yy= parseInt(yyy);
 		
-		var enero=31;
-		var febrero=28;
-		var marzo=31;
-		var abril=30;
-		var mayo=31;
-		var junio=30;
-		var julio=31;
-		var agosto=31;
-		var septiembre=30;
-		var octubre=31;
-		var noviembre=30;
-		var diciembre=31;
+		
 		
 		var m;
 		
@@ -171,86 +160,83 @@
 		{
 			
 			
+			if(d==m)
+				{
+					me=me+1
+					d=0
+				}	
+							
+				if(me>12)
+				{
+					me=1
+					xy=xy+1
+				
+				}
+					
+				
+		d=d+1
 			
 			
 			switch(me)
 		{
 			case 1:
-				m=enero
+				m=31
 				xmes="ENERO"
 				break;
 			case 2:
-				m=febrero
+				m=28
 				xmes="FEBRERO"
 				break;
 			case 3:
-				m=marzo
+				m=31
 				xmes="MARZO"
 				break;
 			case 4:
-				m=abril
+				m=30
 				xmes="ABRIL"
 				break;
 			case 5:
-				m=mayo
+				m=31
 				xmes="MAYO"
 				break;
 			case 6:
-				m=junio
+				m=30
 				xmes="JUNIO"
 				break;
 			case 7:
-				m=julio
+				m=31
 				xmes="JULIO"
 				break;
 			case 8:
-				m=agosto
+				m=31
 				xmes="AGOSTO"
 				break;
 			case 9:
-				m=septiembre
+				m=30
 				xmes="SEPTIEMBRE"
 				break;
 			case 10:
-				m=octubre
+				m=31
 				xmes="OCTUBRE"
 				break;
 			case 11:
-				m=noviembre
+				m=30
 				xmes="NOVIEMBRE"
 				break;
 			case 12:
-				m=diciembre
+				m=31
 				xmes="DICIEMBRE"
 				break;
 		}
 		
-		if (i==1)
-		{
-		resdia=m-dia
-		}
-		
-		
-		
-				if(d==m)
-				{
-					me=me+1
 				
-					d=0
-				}				
+		
 				
-				if(me==12)
-				{
-					me=0
-					xy=xy+1
-				}
-		d=d+1
 		
 		
-					
 		}
-		
-		
+		//d=d-1
+	
 		
 	//alert(d);
 		
