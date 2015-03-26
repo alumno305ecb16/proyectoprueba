@@ -103,16 +103,15 @@
          </form>
          
       
-       <SELECT NAME="yyyy" id="yyyy" class="form_yyyy"> 
-         <OPTION VALUE="">2014</OPTION>
-         <OPTION VALUE="">2015</OPTION>
-         <OPTION VALUE="">2016</OPTION>
-         <OPTION VALUE="">2017</OPTION> 
-         <OPTION VALUE="">2018</OPTION>
-         <OPTION VALUE="">2019</OPTION>
-         <OPTION VALUE="">2020</OPTION>
+      <form name="mm">
+       <SELECT NAME="yyyy" id="yyyy" class="form_select"> 
+           <p>
+         <OPTION VALUE=1>2014</OPTION>
+         <OPTION VALUE=2>2015</OPTION>
+     
+       </p>
        </SELECT>
-  </p>
+       </form>
      
     <div>
     
@@ -131,14 +130,22 @@
 	{
 		var mes=document.getElementById("mm").value;
 		var dia=document.getElementById("dd").value;
+		var yyy=document.getElementById("yyyy").value
+		
+		var combo = document.getElementById("yyyy");
+		var selected = combo.options[combo.selectedIndex].text; 
 		
 		var resdia;
 		
+		var xy;
 		var di;
 		var me;
+		var yy;
 		
+		xy= parseInt(selected)
 		di= parseInt(dia);
 		me= parseInt(mes); 
+		yy= parseInt(yyy);
 		
 		var enero=31;
 		var febrero=28;
@@ -154,13 +161,16 @@
 		var diciembre=31;
 		
 		var m;
-	
+		
+		
 		var d=di;
 		var xmes;
-		
+		var xy
 			
 		for(var i=1;i<=280;i++)
 		{
+			
+			
 			
 			
 			switch(me)
@@ -232,6 +242,7 @@
 				if(me==12)
 				{
 					me=0
+					xy=xy+1
 				}
 		d=d+1
 		
@@ -252,7 +263,7 @@
 			
 					
 	//	alert(suma)
-		document.getElementById("res").innerHTML = d+"/" + xmes;
+		document.getElementById("res").innerHTML = d+" / " + xmes + " / " + xy;
 		
 		
 	}
@@ -272,8 +283,8 @@
 <div id="operaciones"></div>
 </form>
 
-<label> REESULTADO</label>
-<div id="res"></div>
+<h4><label> RESULTADO</label></h4>
+<h2><div id="res"></div></h2>
 
 </center>
 <br>  
