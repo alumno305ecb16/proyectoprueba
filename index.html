@@ -46,37 +46,37 @@
      <form name="dd">
        <SELECT NAME="dd" id="dd" class="form_select"> 
            <p>
-         <OPTION VALUE="1">1</OPTION>
-         <OPTION VALUE="2">2</OPTION>
-         <OPTION VALUE="3">3</OPTION>
-         <OPTION VALUE="4">4</OPTION> 
-         <OPTION VALUE="5">5</OPTION>
-         <OPTION VALUE="6">6</OPTION>
-         <OPTION VALUE="7">7</OPTION>
-         <OPTION VALUE="8">8</OPTION>
-         <OPTION VALUE="9">9</OPTION>
-         <OPTION VALUE="10">10</OPTION>
-         <OPTION VALUE="11">11</OPTION>
-         <OPTION VALUE="12">12</OPTION> 
-         <OPTION VALUE="13">13</OPTION>
-         <OPTION VALUE="14">14</OPTION>
-         <OPTION VALUE="15">15</OPTION>
-         <OPTION VALUE="16">16</OPTION>
-         <OPTION VALUE="17">17</OPTION>
-         <OPTION VALUE="18">18</OPTION>
-         <OPTION VALUE="19">19</OPTION>
-         <OPTION VALUE="20">20</OPTION>
-         <OPTION VALUE="21">21</OPTION>
-         <OPTION VALUE="22">22</OPTION>
-         <OPTION VALUE="23">23</OPTION>
-         <OPTION VALUE="24">24</OPTION>
-         <OPTION VALUE="25">25</OPTION>
-         <OPTION VALUE="26">26</OPTION>
-         <OPTION VALUE="27">27</OPTION>
-         <OPTION VALUE="28">28</OPTION>
-         <OPTION VALUE="29">29</OPTION>
-         <OPTION VALUE="30">30</OPTION>
-         <OPTION VALUE="31">31</OPTION>
+         <OPTION VALUE=1>1</OPTION>
+         <OPTION VALUE=2>2</OPTION>
+         <OPTION VALUE=3>3</OPTION>
+         <OPTION VALUE=4>4</OPTION> 
+         <OPTION VALUE=5>5</OPTION>
+         <OPTION VALUE=6>6</OPTION>
+         <OPTION VALUE=7>7</OPTION>
+         <OPTION VALUE=8>8</OPTION>
+         <OPTION VALUE=9>9</OPTION>
+         <OPTION VALUE=10>10</OPTION>
+         <OPTION VALUE=11>11</OPTION>
+         <OPTION VALUE=12>12</OPTION> 
+         <OPTION VALUE=13>13</OPTION>
+         <OPTION VALUE=14>14</OPTION>
+         <OPTION VALUE=15>15</OPTION>
+         <OPTION VALUE=16>16</OPTION>
+         <OPTION VALUE=17>17</OPTION>
+         <OPTION VALUE=18>18</OPTION>
+         <OPTION VALUE=19>19</OPTION>
+         <OPTION VALUE=20>20</OPTION>
+         <OPTION VALUE=21>21</OPTION>
+         <OPTION VALUE=22>22</OPTION>
+         <OPTION VALUE=23>23</OPTION>
+         <OPTION VALUE=24>24</OPTION>
+         <OPTION VALUE=25>25</OPTION>
+         <OPTION VALUE=26>26</OPTION>
+         <OPTION VALUE=27>27</OPTION>
+         <OPTION VALUE=28>28</OPTION>
+         <OPTION VALUE=29>29</OPTION>
+         <OPTION VALUE=30>30</OPTION>
+         <OPTION VALUE=31>31</OPTION>
          
        </SELECT>
        </p>
@@ -86,18 +86,18 @@
        <form name="mm">
        <SELECT NAME="mm" id="mm" class="form_select"> 
            <p>
-         <OPTION VALUE="1">ENERO</OPTION>
-         <OPTION VALUE="2">FEBRERO</OPTION>
-         <OPTION VALUE="3">MARZO</OPTION>
-         <OPTION VALUE="4">ABRIL</OPTION> 
-         <OPTION VALUE="5">MAYO</OPTION>
-         <OPTION VALUE="6">JUNIO</OPTION>
-         <OPTION VALUE="7">JULIO</OPTION>
-         <OPTION VALUE="8">AGOSTO</OPTION>
-         <OPTION VALUE="9">SEPTIEMBRE</OPTION>
-         <OPTION VALUE="10">OCTUBRE</OPTION>
-         <OPTION VALUE="11">NOVIEMBRE</OPTION>
-         <OPTION VALUE="12">DICIEMBRE</OPTION>
+         <OPTION VALUE=1>ENERO</OPTION>
+         <OPTION VALUE=2>FEBRERO</OPTION>
+         <OPTION VALUE=3>MARZO</OPTION>
+         <OPTION VALUE=4>ABRIL</OPTION> 
+         <OPTION VALUE=5>MAYO</OPTION>
+         <OPTION VALUE=6>JUNIO</OPTION>
+         <OPTION VALUE=7>JULIO</OPTION>
+         <OPTION VALUE=8>AGOSTO</OPTION>
+         <OPTION VALUE=9>SEPTIEMBRE</OPTION>
+         <OPTION VALUE=10>OCTUBRE</OPTION>
+         <OPTION VALUE=11>NOVIEMBRE</OPTION>
+         <OPTION VALUE=12>DICIEMBRE</OPTION>
          </p>
          </SELECT>
          </form>
@@ -125,18 +125,134 @@
     
     
     
+    
     <script>
 	function operaciones()
 	{
-		var suma;
-			var dia=document.getElementById("dd").value;
-			var mes=document.getElementById("mm").value;
+		var mes=document.getElementById("mm").value;
+		var dia=document.getElementById("dd").value;
+		
+		var resdia;
+		
+		var di;
+		var me;
+		
+		di= parseInt(dia);
+		me= parseInt(mes); 
+		
+		var enero=31;
+		var febrero=28;
+		var marzo=31;
+		var abril=30;
+		var mayo=31;
+		var junio=30;
+		var julio=31;
+		var agosto=31;
+		var septiembre=30;
+		var octubre=31;
+		var noviembre=30;
+		var diciembre=31;
+		
+		var m;
+	
+		var d=di;
+		var xmes;
+		
 			
-			suma=(parseInt(dia)+parseInt(mes));
+		for(var i=1;i<=280;i++)
+		{
+			
+			
+			switch(me)
+		{
+			case 1:
+				m=enero
+				xmes="ENERO"
+				break;
+			case 2:
+				m=febrero
+				xmes="FEBRERO"
+				break;
+			case 3:
+				m=marzo
+				xmes="MARZO"
+				break;
+			case 4:
+				m=abril
+				xmes="ABRIL"
+				break;
+			case 5:
+				m=mayo
+				xmes="MAYO"
+				break;
+			case 6:
+				m=junio
+				xmes="JUNIO"
+				break;
+			case 7:
+				m=julio
+				xmes="JULIO"
+				break;
+			case 8:
+				m=agosto
+				xmes="AGOSTO"
+				break;
+			case 9:
+				m=septiembre
+				xmes="SEPTIEMBRE"
+				break;
+			case 10:
+				m=octubre
+				xmes="OCTUBRE"
+				break;
+			case 11:
+				m=noviembre
+				xmes="NOVIEMBRE"
+				break;
+			case 12:
+				m=diciembre
+				xmes="DICIEMBRE"
+				break;
+		}
+		
+		if (i==1)
+		{
+		resdia=m-dia
+		}
+		
+		
+		
+				if(d==m)
+				{
+					me=me+1
+				
+					d=0
+				}				
+				
+				if(me==12)
+				{
+					me=0
+				}
+		d=d+1
+		
+		
+					
+		}
+		
+		
+		
+	//alert(d);
+		
+		
+			
+			
+			
+			//for (x=1;) 
+		//	suma=(parseInt(dia)+parseInt(mes));
 			
 					
 	//	alert(suma)
-		document.getElementById("res").innerHTML = suma;
+		document.getElementById("res").innerHTML = d+"/" + xmes;
 		
 		
 	}
