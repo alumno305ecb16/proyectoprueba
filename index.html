@@ -314,17 +314,148 @@
 	<div data-role="header" data-theme="a">
         		<h1>FORMA DE LA OREJA(PABELLÓN)</h1>
      </div>
-     
+
+<script type="text/livescript">
+function pab(clicked_id)
+{
+	var pabellon=(clicked_id);
+	var glandula=(clicked_id);
+	
+	var valpabellon;
+	var valglandula;
+	var suma;
+	var s;
+	
+	switch(pabellon)
+		{
+		case "a1":
+			suma=0
+			s=0
+			break;
+		case "a2":
+			suma=8
+			s=0
+			break;
+		case "a3":
+			suma=16
+			s=0
+			break;
+		case "a4":
+			suma=24
+			s=0
+			break;
+		case "b1":
+			suma=0
+			s=0
+			break;
+		case "b2":
+			suma=5
+			s=0
+			break;
+		case "b3":
+			suma=10
+			s=0
+			break;
+		case "b4":
+			suma=15
+			s=0
+			break;
+		case "c1":
+			suma=0
+			s=0
+			break;
+		case "c2":
+			suma=5
+			s=0
+			break;
+		case "c3":
+			suma=10
+			s=0
+			break;
+		case "c4":
+			suma=15
+			s=0
+			break;
+		case "c5":
+			s=0
+			suma=20
+			break;
+		case "d1":
+			suma=0
+			s=1
+			break;
+		case "d2":
+			suma=5
+			s=1
+			break;
+		case "d3":
+			suma=10
+			s=1
+			break;
+		case "d4":
+			suma=15
+			s=1
+			break;
+		case "d5":
+			suma=20
+			s=1
+			break;
+		}
+		
+		var total = document.getElementById("valortotal").innerHTML;
+		
+		total=(parseInt(total)+parseInt(suma));
+			
+		var a=document.getElementById("valortotal").innerHTML =total;
+		
+		//alert(a)
+	
+	if (s==1)
+	{
+		total = document.getElementById("valortotal").innerHTML;
+		t=(parseInt(total)+204)
+		var r=t/7
+		
+		//alert("resultado "+r)
+		r=r.toString();
+				
+		var numcaracteres = r.length;
+		var num=parseInt(numcaracteres);
+		
+		
+		
+		var cadena = r.charAt(3);
+		
+		//alert("numero seleccionado "+cadena)
+			var cad=parseInt(cadena);
+			
+		if (cad>=7)
+		{
+			r=parseInt(r)+1
+		} else{
+			var r =r.substring(0,4); 
+		}
+		
+	//	alert("mas1 "+r)
+		
+			
+		a=document.getElementById("valortotal").innerHTML =r+" SEMANAS";
+		
+	}
+				
+}
+</script>  
+
 
      <div>
         
-    <a href="#pagsano2"><input type="image" onClick="pab()" src="jquery-mobile/images/pabellon/aplanada.jpg" align="left" width="100" height="100" value="0"></a><p align="left">Aplanada sin incurvación</p><br><br><br><br>
+    <a href="#pagsano2"><input type="image" id="a1" onClick="pab(this.id)" src="jquery-mobile/images/pabellon/aplanada.jpg" align="left" width="100" height="100" value="0"></a><p align="left">Aplanada sin incurvación</p><br><br><br><br>
         
-       <a href="#pagsano2"> <input type="image" onClick="pab()" src="jquery-mobile/images/pabellon/superior.jpg" align="left" width="100" height="100" value="8"></a><p align="left">Borde superior parcialmente incurvado</p><br><br><br>
+       <a href="#pagsano2"> <input type="image" id="a2" onClick="pab(this.id)" src="jquery-mobile/images/pabellon/superior.jpg" align="left" width="100" height="100" value="8"></a><p align="left">Borde superior parcialmente incurvado</p><br><br><br>
        
-        <a href="#pagsano2"> <input type="image" onClick="pab()" src="jquery-mobile/images/pabellon/todoborde.jpg" align="left" width="100" height="100" value="16"></a><p align="left">Todo el borde sup incurvado</p><br><br><br>
+        <a href="#pagsano2"> <input type="image" id="a3" onClick="pab(this.id)" src="jquery-mobile/images/pabellon/todoborde.jpg" align="left" width="100" height="100" value="16"></a><p align="left">Todo el borde sup incurvado</p><br><br><br>
         
-         <a href="#pagsano2"><input type="image" onClick="pab()" src="jquery-mobile/images/pabellon/incurvadopabellon.jpg" align="left" width="100" height="100" value="24"></a><p align="left">Pabellón totalmente incurvado</p><br><br><br>
+         <a href="#pagsano2"><input type="image" id="a4" onClick="pab(this.id)" src="jquery-mobile/images/pabellon/incurvadopabellon.jpg" align="left" width="100" height="100" value="24"></a><p align="left">Pabellón totalmente incurvado</p><br><br><br>
      
      </div>
 
@@ -339,6 +470,8 @@
      
 </center>
 
+
+
  <div data-role="page" id="pagsano2" data-add-back-btn="true" data-theme="a">
 	<div data-role="header" data-theme="a">
         		<h1>TAMAÑO DE GLÁNDULA</h1>
@@ -346,10 +479,15 @@
      
 
      <div>
-   		<a href="#pagsano4"><input type="image" src="jquery-mobile/images/glandula/palpable.jpg" align="left" width="100" height="100" value="0"></a><p align="left">No palpable</p><br><br><br><br>
-        <a href="#pagsano4"><input type="image" src="jquery-mobile/images/glandula/menor5.jpg"  align="left" width="100" height="100" value="5"></a><p align="left">Palpable menor de 5 mm.</p><br><br><br>
-        <a href="#pagsano4"><input type="image" src="jquery-mobile/images/glandula/entre5y10.jpg" align="left" width="100" height="100" value="10"></a><p align="left">Palpable entre 5 y 10 mm.</p><br><br><br>
-        <a href="#pagsano4"><input type="image" src="jquery-mobile/images/glandula/mayor10.jpg"  align="left" width="100" height="100" value="15"></a><p align="left">Palpable mayor a 10 mm.</p><br><br><br>
+     
+   		<a href="#pagsano4"><input type="image" id="b1" onClick="pab(this.id)" src="jquery-mobile/images/glandula/palpable.jpg" align="left" width="100" height="100" value="0"></a><p align="left">No palpable</p><br><br><br><br>
+        
+        <a href="#pagsano4"><input type="image" id="b2" onClick="pab(this.id)" src="jquery-mobile/images/glandula/menor5.jpg"  align="left" width="100" height="100" value="5"></a><p align="left">Palpable menor de 5 mm.</p><br><br><br>
+        
+        <a href="#pagsano4"><input type="image" id="b3" onClick="pab(this.id)" src="jquery-mobile/images/glandula/entre5y10.jpg" align="left" width="100" height="100" value="10"></a><p align="left">Palpable entre 5 y 10 mm.</p><br><br><br>
+        
+        <a href="#pagsano4"><input type="image" id="b4" onClick="pab(this.id)" src="jquery-mobile/images/glandula/mayor10.jpg"  align="left" width="100" height="100" value="15"></a><p align="left">Palpable mayor a 10 mm.</p><br><br><br>
+     
      </div>
      
            
@@ -374,11 +512,16 @@
      
 
      <div>
-   		<a href="#pagsano5"><input type="image" src="jquery-mobile/images/texturapiel/muyfina.jpg" align="left" width="100" height="100"></a><p align="left">Muy fina gelatinosa</p><br><br><br><br>
-        <a href="#pagsano5"><input type="image" src="jquery-mobile/images/texturapiel/finalisa.jpg" align="left" width="100" height="100" value="5"></a><p align="left">Fina lisa</p><br><br><br>
-        <a href="#pagsano5"><input type="image" src="jquery-mobile/images/texturapiel/masgruesa.jpg" align="left" width="100" height="100" value="10"></a><p align="left">Mas gruesa discreta descamación superficial</p><br><br><br>
-        <a href="#pagsano5"><input type="image" src="jquery-mobile/images/texturapiel/gruesagrietas.jpg" align="left" width="100" height="100" value="15"></a><p align="left">Gruesa grietas superficiales descamación de manos y pies</p><br><br><br>
-         <a href="#pagsano5"><input type="image" src="jquery-mobile/images/texturapiel/gruesagrietasape.jpg" align="left" width="100" height="100" value="20"></a><p align="left">Gruesa grieta profundas apergaminadas</p><br><br><br>
+     
+   		<a href="#pagsano5"><input type="image" id="c1" onClick="pab(this.id)" src="jquery-mobile/images/texturapiel/muyfina.jpg" align="left" width="100" height="100"></a><p align="left">Muy fina gelatinosa</p><br><br><br><br>
+        
+        <a href="#pagsano5"><input type="image" id="c2" onClick="pab(this.id)" src="jquery-mobile/images/texturapiel/finalisa.jpg" align="left" width="100" height="100" value="5"></a><p align="left">Fina lisa</p><br><br><br>
+        
+        <a href="#pagsano5"><input type="image" id="c3" onClick="pab(this.id)" src="jquery-mobile/images/texturapiel/masgruesa.jpg" align="left" width="100" height="100" value="10"></a><p align="left">Mas gruesa discreta descamación superficial</p><br><br><br>
+        
+        <a href="#pagsano5"><input type="image" id="c4" onClick="pab(this.id)" src="jquery-mobile/images/texturapiel/gruesagrietas.jpg" align="left" width="100" height="100" value="15"></a><p align="left">Gruesa grietas superficiales descamación de manos y pies</p><br><br><br>
+        
+         <a href="#pagsano5"><input type="image" id="c5" onClick="pab(this.id)" src="jquery-mobile/images/texturapiel/gruesagrietasape.jpg" align="left" width="100" height="100" value="20"></a><p align="left">Gruesa grieta profundas apergaminadas</p><br><br><br>
      </div>
      
            
@@ -397,13 +540,17 @@
      </div>
      
 
-     <div>
+     <div">
        
-   		<a href="#pagres"><input type="image" src="jquery-mobile/images/plantares/sinpliegues.jpg" align="left" width="100" height="100" value="0"></a><p align="left">Sin pliegues</p><br><br><br><br>
-        <a href="#pagres"><input type="image" src="jquery-mobile/images/plantares/marcasmaldefinidas.jpg" align="left" width="100" height="100" value="5"></a><p align="left">Marcas mal definidas en la mitad anterior</p><br><br><br>
-        <a href="#pagres"><input type="image" src="jquery-mobile/images/plantares/marcasbiendefinidas.jpg" align="left" width="100" height="100" value="10"></a><p align="left">Marcas bien definidas en la 1/2 anterior, surcos en 1/2 anterior</p><br><br><br>
-        <a href="#pagres"><input type="image" src="jquery-mobile/images/plantares/surcos.jpg" align="left" width="100" height="100" value="15"></a><p align="left">Surcos en la mitad anterior</p><br><br><br>
-         <a href="#pagres"><input type="image" src="jquery-mobile/images/plantares/surcosenmas.jpg" align="left" width="100" height="100" value="20"></a><p align="left">Surcos en mas de la mitad anterior</p><br><br><br>
+   		<a href="#pagres"><input type="image" id="d1" onClick="pab(this.id)" src="jquery-mobile/images/plantares/sinpliegues.jpg" align="left" width="100" height="100" value="0"></a><p align="left">Sin pliegues</p><br><br><br><br>
+        
+        <a href="#pagres"><input type="image" id="d2" onClick="pab(this.id)" src="jquery-mobile/images/plantares/marcasmaldefinidas.jpg" align="left" width="100" height="100" value="5"></a><p align="left">Marcas mal definidas en la mitad anterior</p><br><br><br>
+        
+        <a href="#pagres"><input type="image" id="d3" onClick="pab(this.id)" src="jquery-mobile/images/plantares/marcasbiendefinidas.jpg" align="left" width="100" height="100" value="10"></a><p align="left">Marcas bien definidas en la 1/2 anterior, surcos en 1/2 anterior</p><br><br><br>
+        
+        <a href="#pagres"><input type="image" id="d4" onClick="pab(this.id)" src="jquery-mobile/images/plantares/surcos.jpg" align="left" width="100" height="100" value="15"></a><p align="left">Surcos en la mitad anterior</p><br><br><br>
+        
+         <a href="#pagres"><input type="image" id="d5" onClick="pab(this.id)" src="jquery-mobile/images/plantares/surcosenmas.jpg" align="left" width="100" height="100" value="20"></a><p align="left">Surcos en mas de la mitad anterior</p><br><br><br>
      </div>
      
        
@@ -417,13 +564,20 @@
 </center>     
 
 
-<div data-role="page" id="pagres" data-add-back-btn="true" data-theme="a">
+<div data-role="page" id="pagres" data-theme="a">
 	<div data-role="header" data-theme="a">
         		<h1>RESULTADO</h1>
     </div>
-    <div><center>
-    <a href="#pagcapurro" class="parto">REGRESAR</a>
+    <div>
+    <center>
+    <br>
+    
+    <div id="valortotal">0</div>
+    
+    <a href="#pagcapurro" class="parto" onClick="r()">REGRESAR</a>
+    
     </center>
+    
     </div>
   	 <center>
     	<div data-role="footer" data-theme="a">
@@ -431,6 +585,14 @@
 	   </div>
  </div>
 	</center>
+
+
+<script>
+function r()
+{
+	a=document.getElementById("valortotal").innerHTML =0;
+}
+</script>
 
 
        <div data-role="page" id="pagdep" data-add-back-btn="true" data-theme="a">
