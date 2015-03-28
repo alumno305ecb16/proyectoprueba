@@ -25,7 +25,10 @@
       <div data-role="content" data-theme="a">
      	<ul data-role="listview">
         <li><a href="#pagparto" data-transition="slidedown">FECHA PROBABLE DE PARTO</a></li>
-         <li><a href="#pagcapurro" data-transition="slidedown">CAPURRO</a></li>
+        <li><a href="#pagcapurro" data-transition="slidedown">CAPURRO</a></li>
+        <br>
+        <li><a href="#pagacerca" data-transition="slidedown">ACERCA DE</a></li>
+          
          </ul>
         </div>
     <div data-role="footer" data-theme="a">
@@ -257,9 +260,15 @@
 			}
 		}
 		
+		if(di>m)
+		{
+		alert("FECHA INVALIDA")
+			document.getElementById("res").innerHTML ="";
+		}else{
+			document.getElementById("res").innerHTML =fecha1+"  -  "+fecha2;
+		}
 		
 		
-		document.getElementById("res").innerHTML =fecha1+"  -  "+fecha2;
 		
 		
 	}
@@ -294,7 +303,7 @@
   </div>
   
   
-   <div data-role="page" id="pagcapurro" data-add-back-btn="true" data-theme="a">
+   <div data-role="page" id="pagcapurro" data-theme="a">
 	<div data-role="header" data-theme="a">
     
     		<h1>CAPURRO</h1>
@@ -303,10 +312,12 @@
      	<ul data-role="listview">
         <li><a href="#pagsano" data-transition="slidedown">SANO</a></li>
          <li><a href="#pagdep" data-transition="slidedown">DEPRIMIDO</a></li><br>
-          <li><a href="#page" data-transition="slidedown">PRINCIPAL</a></li>
          </ul>
+         <br>
+        <center> <a href="#page"  class="proyecto" data-transition="slidedown">PRINCIPAL</a></center>
         </div>
         
+        <br><br>
       <div data-role="footer" data-theme="a">
    	<h4>AREA DE SALUD</h4>
    </div>
@@ -314,10 +325,7 @@
      </div>
   </center>
   
-  <div data-role="page" id="pagsano" data-add-back-btn="true" data-theme="a">
-	<div data-role="header" data-theme="a">
-        		<h1>FORMA DE LA OREJA(PABELLÓN)</h1>
-     </div>
+  
 
 <script type="text/livescript">
 function pab(clicked_id)
@@ -450,8 +458,13 @@ function pab(clicked_id)
 }
 </script>  
 
+	<div data-role="page" id="pagsano" data-add-back-btn="true" data-theme="a">
+	<div data-role="header" data-theme="a">
+        		<h1>FORMA DE LA OREJA(PABELLÓN)</h1>
+     </div>
+
 	
-     <div>
+    <div>
      	    
            <table border="2px"> 
            <tr>
@@ -560,10 +573,6 @@ function pab(clicked_id)
      </div>
      
 </center>     
-
-
-
-
 
 
 
@@ -727,91 +736,656 @@ function pab(clicked_id)
 function r()
 {
 	a=document.getElementById("valortotal").innerHTML =0;
+	a=document.getElementById("valortot").innerHTML =0;
 }
 </script>
 
 
-       <div data-role="page" id="pagdep" data-add-back-btn="true" data-theme="a">
+		<!-- DEPRIMIDO-->
+
+		
+        
+        <div data-role="page" id="pagdep" data-add-back-btn="true" data-theme="a">
 	<div data-role="header" data-theme="a">
-        		<h1>CAPURRO</h1>
+        		<h1>FORMA DE LA OREJA(PABELLÓN)</h1>
      </div>
- <center>
-       <div>
-     <h5>FORMA DE LA OREJA (PABELLÒN) </h5>
-      <SELECT NAME="selCombo" SIZE=1 id="forma"> 
-			<OPTION VALUE="">Aplanada, sin incurvaciòn</OPTION>
-			<OPTION VALUE="">Borde superior parcialmente incurvado</OPTION>
-			<OPTION VALUE="">Todo el borde sup incurvado</OPTION>
-			<OPTION VALUE="">Pabellòn totalmente incurvado</OPTION> 
-	</SELECT>
+
+	
+    <div>
+     	    
+           <table border="2px"> 
+           <tr>
+           <td>    
+        <a href="#pagdep2"><input type="image" id="e1" onClick="capdep(this.id)" src="jquery-mobile/images/pabellon/aplanada.jpg" align="left" width="100" height="100" value="0"></a>
+        </td>
+        <td>
+        <p align="left">Aplanada sin incurvación</p>
+        </td>
+        </tr>
+        
+        <tr>
+        <td>
+       <a href="#pagdep2"> <input type="image" id="e2" onClick="capdep(this.id)" src="jquery-mobile/images/pabellon/superior.jpg" align="left" width="100" height="100" value="8"></a>
+       </td>
+       <td bgcolor="#ACBFFF">
+       <p align="left">Borde superior parcialmente incurvado</p>
+       	</td>
+        </tr>
+        
+        <tr>
+        <td>		
+        <a href="#pagdep2"> <input type="image" id="e3" onClick="capdep(this.id)" src="jquery-mobile/images/pabellon/todoborde.jpg" align="left" width="100" height="100" value="16"></a>
+        </td>
+        <td>
+        <p align="left">Todo el borde sup incurvado</p>
+        </td>
+        </tr>
+        
+        <tr>
+        <td>
+         <a href="#pagdep2"><input type="image" id="e4" onClick="capdep(this.id)" src="jquery-mobile/images/pabellon/incurvadopabellon.jpg" align="left" width="100" height="100" value="24"></a>
+         </td>
+         <td bgcolor="#ACBFFF">
+         <p align="left">Pabellón totalmente incurvado</p>
+     	</td>
+        </tr>
+        </table>
      </div>
-     
-     <div>
-     <h5>TAMAÑO DE GLÀNDULA MAMARIA</h5>
-      <SELECT NAME="selCombo" SIZE=1 id="forma"> 
-			<OPTION VALUE="">No palpable</OPTION>
-			<OPTION VALUE="">Palpable menor de 5 mm</OPTION>
-			<OPTION VALUE="">Palpable entre 5 y 10 mm</OPTION>
-			<OPTION VALUE="">Palpable mayor de 10 mm</OPTION> 
-	</SELECT>
-     </div>
-     
-     <div>
-     <h5>FORMACIÒN DEL PEZON</h5>
-      <SELECT NAME="selCombo" SIZE=1 id="forma"> 
-			<OPTION VALUE="">Apenas visible sin areola</OPTION>
-			<OPTION VALUE="">Diametro menor de 7.5 mm Areola lisa y chata</OPTION>
-			<OPTION VALUE="">Diametro mayor de 7.5 mm Areola Punteada (Borde levantado)</OPTION>
-			<OPTION VALUE="">Diametro mayor de 7.5 mm Areola Punteada (Borde no levantado)</OPTION> 
-	</SELECT>
-     </div>
-     
-         <div>
-     <h5>TEXTURA DE LA PIEL</h5>
-      <SELECT NAME="selCombo" SIZE=1 id="forma"> 
-			<OPTION VALUE="">Muy fina gelatinosa</OPTION>
-			<OPTION VALUE="">Fina lisa</OPTION>
-			<OPTION VALUE="">Mas gruesa discreta descamaciòn superficial</OPTION>
-			<OPTION VALUE="">Gruesa grietas superficiales descamaciòn d manos y pies</OPTION> 
-            <OPTION VALUE="">Gruesa grietas profundas apergaminadas</OPTION> 
-	</SELECT>
-     </div>
-     
-     <div>
-     <h5>PLIEGUES PLANTARES</h5>
-      <SELECT NAME="selCombo" SIZE=1 id="forma"> 
-			<OPTION VALUE="">Sin pliegues</OPTION>
-			<OPTION VALUE="">Marcas mal definidas en la mitad anterior</OPTION>
-			<OPTION VALUE="">Marcas bien definidas en la 1/2 anterior, surcos en 1/2 anteriorç</OPTION>
-			<OPTION VALUE="">Gruesa grietas superficiales descamaciòn d manos y pies</OPTION> 
-            <OPTION VALUE="">Gruesa grietas profundas apergaminadas</OPTION> 
-	</SELECT>
-     </div>
-     
-      <div>
-     <h5>SIGNO DE LA BUFANDA</h5>
-      <SELECT NAME="selCombo" SIZE=1 id="forma"> 
-			<OPTION VALUE="">El codo alcanza la linea auxiliar del lado opuesto</OPTION>
-			<OPTION VALUE="">Codo entre la linea auxiliar anterior</OPTION>
-			<OPTION VALUE="">El codo alcanza la linea media</OPTION>
-			<OPTION VALUE="">El codo alcanza la linea media</OPTION> 
-           	</SELECT>
-     </div>
-     
-      <div>
-     <h5>CABEZA EN GOTA</h5>
-      <SELECT NAME="selCombo" SIZE=1 id="forma"> 
-			<OPTION VALUE="">Deflexiòn total de la cabeza àlgunos mayores de 270ª</OPTION>
-			<OPTION VALUE="">Control cefàlico parcial, angulo entre 180ª-270ª</OPTION>
-			<OPTION VALUE="">Capaz de mantener cabeza en linea con el cuerpo 180ª</OPTION>
-			<OPTION VALUE="">Lleva la cabeza anterior al cuerpo angulo menor 180ª</OPTION> 
-           	</SELECT>
-     </div>
+
+
+   
+           
+ <center> 
       <div data-role="footer" data-theme="a">
    	<h4>AREA DE SALUD</h4>
    </div>
      </div>
- </center>    
+     
+</center>
+
+
+
+ <div data-role="page" id="pagdep2" data-add-back-btn="true" data-theme="a">
+	<div data-role="header" data-theme="a">
+        		<h1>TAMAÑO DE GLÁNDULA</h1>
+     </div>
+     
+
+     <div>
+    
+     	<table border="2px"> 
+           <tr>
+           <td>
+   		<a href="#pagdep3"><input type="image" id="f1" onClick="capdep(this.id)" src="jquery-mobile/images/glandula/palpable.jpg" align="left" width="100" height="100" value="0"></a>
+        	</td>
+            <td>
+        <p align="left">No palpable</p>
+        	</td>
+            </tr>
+            
+            <tr>
+            <td>
+        <a href="#pagdep3"><input type="image" id="f2" onClick="capdep(this.id)" src="jquery-mobile/images/glandula/menor5.jpg"  align="left" width="100" height="100" value="5"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">Palpable menor de 5 mm.</p>
+        	</td>
+            </tr>
+            
+        	<tr>
+            <td>
+        <a href="#pagdep3"><input type="image" id="f3" onClick="capdep(this.id)" src="jquery-mobile/images/glandula/entre5y10.jpg" align="left" width="100" height="100" value="10"></a>
+        	</td>
+            <td>
+        <p align="left">Palpable entre 5 y 10 mm.</p>
+        	</td>
+        	</tr>
+            
+            <tr>
+            <td>
+        <a href="#pagdep3"><input type="image" id="f4" onClick="capdep(this.id)" src="jquery-mobile/images/glandula/mayor10.jpg"  align="left" width="100" height="100" value="15"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">Palpable mayor a 10 mm.</p>
+     		</td>
+            </tr>
+       </table>
+     </div>
+     
+           
+ <center>   
+      <div data-role="footer" data-theme="a">
+   	<h4>AREA DE SALUD</h4>
+   </div>
+     </div>
+     
+</center>     
+
+
+<!-- DEP 3-->
+
+<div data-role="page" id="pagdep3" data-add-back-btn="true" data-theme="a">
+	<div data-role="header" data-theme="a">
+        		<h1>FORMACIÓN DEL PEZÓN</h1>
+     </div>
+     
+
+     <div>
+    
+     	<table border="2px"> 
+           <tr>
+           <td>
+   		<a href="#pagdep4"><input type="image" id="g1" onClick="capdep(this.id)" src="jquery-mobile/images/pezon/apenavicible.jpg" align="left" width="100" height="100" value="0"></a>
+        	</td>
+            <td>
+        <p align="left">Apenas visible sin Areola</p>
+        	</td>
+            </tr>
+            
+            <tr>
+            <td>
+        <a href="#pagdep4"><input type="image" id="g2" onClick="capdep(this.id)" src="jquery-mobile/images/pezon/diametro75lineachata.jpg"  align="left" width="100" height="100" value="5"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">Diametro menor de 7.5 mm Areola lisa y chata</p>
+        	</td>
+            </tr>
+            
+        	<tr>
+            <td>
+        <a href="#pagdep4"><input type="image" id="g3" onClick="capdep(this.id)" src="jquery-mobile/images/pezon/bordenolevantado.jpg" align="left" width="100" height="100" value="10"></a>
+        	</td>
+            <td>
+        <p align="left">Diametro mayor de 7.5 Areola punteada (Borde no elevado)</p>
+        	</td>
+        	</tr>
+            
+            <tr>
+            <td>
+        <a href="#pagdep4"><input type="image" id="g4" onClick="capdep(this.id)" src="jquery-mobile/images/pezon/bordelevantado.jpg"  align="left" width="100" height="100" value="15"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">Diametro mayor de 7.5 Areola punteada (Borde elevado)</p>
+     		</td>
+            </tr>
+       </table>
+     </div>
+     
+           
+ <center>   
+      <div data-role="footer" data-theme="a">
+   	<h4>AREA DE SALUD</h4>
+   </div>
+     </div>
+     
+</center>     
+
+<!-- DEP 4-->
+
+ <div data-role="page" id="pagdep4" data-add-back-btn="true" data-theme="a">
+	<div data-role="header" data-theme="a">
+        		<h1>TEXTURA DE LA PIEL</h1>
+     </div>
+     
+
+     <div>
+     	<table border="2px"> 
+           <tr>
+           <td>
+   		<a href="#pagdep5"><input type="image" id="h1" onClick="capdep(this.id)" src="jquery-mobile/images/texturapiel/muyfina.jpg" align="left" width="100" height="100"></a>
+        	</td>
+            <td>
+        <p align="left">Muy fina gelatinosa</p>
+        	</td>
+            </tr>
+        
+        	<tr>
+            <td>
+        <a href="#pagdep5"><input type="image" id="h2" onClick="capdep(this.id)" src="jquery-mobile/images/texturapiel/finalisa.jpg" align="left" width="100" height="100" value="5"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">Fina lisa</p>
+        	</td>
+            </tr>
+            
+            <tr>
+            <td>
+        <a href="#pagdep5"><input type="image" id="h3" onClick="capdep(this.id)" src="jquery-mobile/images/texturapiel/masgruesa.jpg" align="left" width="100" height="100" value="10"></a>
+        	</td>
+            <td>
+            <p align="left">Mas gruesa discreta descamación superficial</p>
+        	</td>
+            </tr>
+            
+            <tr>
+            <td>
+        <a href="#pagdep5"><input type="image" id="h4" onClick="capdep(this.id)" src="jquery-mobile/images/texturapiel/gruesagrietas.jpg" align="left" width="100" height="100" value="15"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">Gruesa grietas superficiales descamación de manos y pies</p>
+        	</td>
+            </tr>
+            
+            <tr>
+            <td>
+         <a href="#pagdep5"><input type="image" id="h5" onClick="capdep(this.id)" src="jquery-mobile/images/texturapiel/gruesagrietasape.jpg" align="left" width="100" height="100" value="20"></a>
+         	</td>
+            <td>
+         <p align="left">Gruesa grieta profundas apergaminadas</p>
+         	</td>
+            </tr>
+            </table>
+     </div>
+     
+           
+<center>
+      <div data-role="footer" data-theme="a">
+   	<h4>AREA DE SALUD</h4>
+   </div>
+     </div>
+     
+</center>     
+  
+  
+  <!-- DEP5 -->
+
+<div data-role="page" id="pagdep5" data-add-back-btn="true" data-theme="a">
+	<div data-role="header" data-theme="a">
+        		<h1>PLIEGUES PLANTARES</h1>
+     </div>
+     
+
+     <div">
+       <table border="2px"> 
+           <tr>
+           <td>
+   		<a href="#pagdep6"><input type="image" id="i1" onClick="capdep(this.id)" src="jquery-mobile/images/plantares/sinpliegues.jpg" align="left" width="100" height="100" value="0"></a>
+        	</td>
+            <td>
+        <p align="left">Sin pliegues</p>
+        	</td>
+            </tr>
+            
+            <tr>
+            <td>
+        <a href="#pagdep6"><input type="image" id="i2" onClick="capdep(this.id)" src="jquery-mobile/images/plantares/marcasmaldefinidas.jpg" align="left" width="100" height="100" value="5"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">Marcas mal definidas en la mitad anterior</p>
+        	</td>
+            </tr>
+        
+        	<tr>
+            <td>
+        <a href="#pagdep6"><input type="image" id="i3" onClick="capdep(this.id)" src="jquery-mobile/images/plantares/marcasbiendefinidas.jpg" align="left" width="100" height="100" value="10"></a>
+        	</td>
+            <td>
+        <p align="left">Marcas bien definidas en la 1/2 anterior, surcos en 1/2 anterior</p>
+        	</td>
+            </tr>
+            
+            <tr>
+            <td>
+        <a href="#pagdep6"><input type="image" id="i4" onClick="capdep(this.id)" src="jquery-mobile/images/plantares/surcos.jpg" align="left" width="100" height="100" value="15"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">Surcos en la mitad anterior</p>
+        	</td>
+            </tr>
+            
+           	<tr>
+            <td> 
+         <a href="#pagdep6"><input type="image" id="i5" onClick="capdep(this.id)" src="jquery-mobile/images/plantares/surcosenmas.jpg" align="left" width="100" height="100" value="20"></a>
+         	</td>
+            <td>
+          <p align="left">Surcos en mas de la mitad anterior</p>
+     		</td>
+            </tr>
+      </table>
+    
+     
+       
+           
+<center>
+      <div data-role="footer" data-theme="a">
+   	<h4>AREA DE SALUD</h4>
+   </div>
+     </div>
+     
+     </div> 
+</center>     
+
+<!-- DEP 6-->
+
+
+ <div data-role="page" id="pagdep6" data-add-back-btn="true" data-theme="a">
+	<div data-role="header" data-theme="a">
+        		<h1>SIGNO DE LA BUFANDA</h1>
+     </div>
+     
+
+     <div>
+     	<table border="2px"> 
+           <tr>
+           <td>
+   		<a href="#pagdep7"><input type="image" id="j1" onClick="capdep(this.id)" src="jquery-mobile/images/bufanda/alcanzalineaauxiliar.jpg" align="left" width="100" height="100"></a>
+        	</td>
+            <td>
+        <p align="left">El codo queda a nivel del pezón opuesto</p>
+        	</td>
+            </tr>
+        
+        	<tr>
+            <td>
+        <a href="#pagdep7"><input type="image" id="j2" onClick="capdep(this.id)" src="jquery-mobile/images/bufanda/lineaauxiliaranterior.jpg" align="left" width="100" height="100" value="5"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">El codo queda a nivel del apéndice xifoides</p>
+        	</td>
+            </tr>
+            
+            <tr>
+            <td>
+        <a href="#pagdep7"><input type="image" id="j3" onClick="capdep(this.id)" src="jquery-mobile/images/bufanda/alcanzalineamedia.jpg" align="left" width="100" height="100" value="10"></a>
+        	</td>
+            <td>
+            <p align="left">El codo queda a nivel del pezón del mismo lado</p>
+        	</td>
+            </tr>
+            
+            <tr>
+            <td>
+        <a href="#pagdep7"><input type="image" id="j4" onClick="capdep(this.id)" src="jquery-mobile/images/bufanda/alcanzalineamedia1.jpg" align="left" width="100" height="100" value="15"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">El codo queda en la línea axila del mismo lado</p>
+        	</td>
+            </tr>
+                
+            </table>
+     </div>
+     
+           
+<center>
+      <div data-role="footer" data-theme="a">
+   	<h4>AREA DE SALUD</h4>
+   </div>
+     </div>
+     
+</center>     
+  
+  <!-- 7 DEP -->
+    
+     <div data-role="page" id="pagdep7" data-add-back-btn="true" data-theme="a">
+	<div data-role="header" data-theme="a">
+        		<h1>SIGNO CABEZA EN GOTA</h1>
+     </div>
+     
+
+     <div>
+     	<table border="2px"> 
+           <tr>
+           <td>
+   		<a href="#pagresdep"><input type="image" id="k1" onClick="capdep(this.id)" src="jquery-mobile/images/gota/def.jpg" align="left" width="100" height="100"></a>
+        	</td>
+            <td>
+        <p align="left">Deflexión total de la cabeza álgunos mayores de 270°</p>
+        	</td>
+            </tr>
+        
+        	<tr>
+            <td>
+        <a href="#pagresdep"><input type="image" id="k2" onClick="capdep(this.id)" src="jquery-mobile/images/gota/deflexion.jpg"  align="left" width="100" height="100" value="5"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">control céfatico parcial, angulo entre 180°-270°</p>
+        	</td>
+            </tr>
+            
+            <tr>
+            <td>
+        <a href="#pagresdep"><input type="image" id="k3" onClick="capdep(this.id)" src="jquery-mobile/images/gota/180gradaos.jpg" align="left" width="100" height="100" value="10"></a>
+        	</td>
+            <td>
+            <p align="left">Capaz de mantener cabeza en linea con el cuerpo 180°</p>
+        	</td>
+            </tr>
+            
+            <tr>
+            <td>
+        <a href="#pagresdep"><input type="image" id="k4" onClick="capdep(this.id)" src="jquery-mobile/images/gota/123scsdf.jpg" align="left" width="100" height="100" value="15"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">Lleva la cabeza anterior al cuerpo ángulo menor 180°</p>
+        	</td>
+            </tr>
+                
+            </table>
+     </div>
+     
+           
+<center>
+      <div data-role="footer" data-theme="a">
+   	<h4>AREA DE SALUD</h4>
+   </div>
+     </div>
+     
+</center>     
+        
+   <!-- DEP RESILTADO-->     
+        
+        <div data-role="page" id="pagresdep" data-theme="a">
+	<div data-role="header" data-theme="a">
+        		<h1>RESULTADO</h1>
+    </div>
+    <div>
+    <center>
+    <br>
+    
+   <h3> <div id="valortot">0</div></h3>
+    
+    <a href="#pagcapurro" class="proyecto" onClick="r()">REGRESAR</a>
+   
+    </center>
+    
+    </div>
+     <br>
+  	 <center>
+    	<div data-role="footer" data-theme="a">
+   			<h4>AREA DE SALUD</h4>
+	   </div>
+ </div>
+	</center>
+
+
+
+
+
+<script type="text/livescript">
+function capdep(clicked_id)
+{
+	var pabellon=(clicked_id);
+	//alert(pabellon);
+	var glandula=(clicked_id);
+	
+	var valpabellon;
+	var valglandula;
+	var suma;
+	var s;
+	
+	switch(pabellon)
+		{
+		case "e1":
+			suma=0
+			s=0
+			break;
+		case "e2":
+			suma=8
+			s=0
+			break;
+		case "e3":
+			suma=16
+			s=0
+			break;
+		case "e4":
+			suma=24
+			s=0
+			break;
+		case "f1":
+			suma=0
+			s=0
+			break;
+		case "f2":
+			suma=5
+			s=0
+			break;
+		case "f3":
+			suma=10
+			s=0
+			break;
+		case "f4":
+			suma=15
+			s=0
+			break;
+		case "g1":
+			suma=0
+			s=0
+			break;
+		case "g2":
+			suma=5
+			s=0
+			break;
+		case "g3":
+			suma=10
+			s=0
+			break;
+		case "g4":
+			suma=15
+			s=0
+			break;
+		case "g5":
+			s=0
+			suma=20
+			break;
+		case "h1":
+			suma=0
+			s=0
+			break;
+		case "h2":
+			suma=5
+			s=0
+			break;
+		case "h3":
+			suma=10
+			s=0
+			break;
+		case "h4":
+			suma=15
+			s=0
+			break;
+		case "h5":
+			suma=20
+			s=0
+			break;
+		case "i1":
+			suma=0
+			s=0
+			break;
+		case "i2":
+			suma=5
+			s=0
+			break;
+		case "i3":
+			suma=10
+			s=0
+			break;
+		case "i4":
+			suma=15
+			s=0
+			break;
+		case "i5":
+			suma=20
+			s=0
+			break;
+		case "j1":
+			suma=0
+			s=0
+			break;
+		case "j2":
+			suma=6
+			s=0
+			break;
+		case "j3":
+			s=0
+			suma=12
+			break;
+		case "j4":
+			suma=18
+			s=0
+			break;
+		case "k1":
+			suma=0
+			s=1
+			break;
+		case "k2":
+			suma=4
+			s=1
+			break;
+		case "k3":
+			suma=8
+			s=1
+			break;
+		case "k4":
+			suma=12
+			s=1
+			break;
+		}
+		
+		var total = document.getElementById("valortot").innerHTML;
+		
+		total=(parseInt(total)+parseInt(suma));
+			
+		var a=document.getElementById("valortot").innerHTML =total;
+		
+	//	alert(a)
+		
+	
+		if (s==1)
+	{
+		total = document.getElementById("valortot").innerHTML;
+		t=(parseInt(total)+204)
+		var r=t/7
+		
+		//alert("resultado "+r)
+		r=r.toString();
+				
+		var numcaracteres = r.length;
+		var num=parseInt(numcaracteres);
+		
+		
+		
+		var cadena = r.charAt(3);
+		
+		//alert("numero seleccionado "+cadena)
+			var cad=parseInt(cadena);
+			
+		if (cad>=7)
+		{
+			r=parseInt(r)+1
+		} else{
+			var r =r.substring(0,4); 
+		}
+		
+	//	alert("mas1 "+r)
+		
+			
+		a=document.getElementById("valortot").innerHTML =r+" SEMANAS";
+		
+	}
+		
+}
+</script>
+    
      
 </body>
 </html>
