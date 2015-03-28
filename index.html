@@ -271,7 +271,9 @@
 <center>
 <form>
 <br>
+
 <a href="" class="proyecto" onClick="operaciones()">CALCULAR</a>
+
  
 </form>
 
@@ -448,17 +450,46 @@ function pab(clicked_id)
 }
 </script>  
 
-
+	
      <div>
+     	    
+           <table border="2px"> 
+           <tr>
+           <td>    
+        <a href="#pagsano2"><input type="image" id="a1" onClick="pab(this.id)" src="jquery-mobile/images/pabellon/aplanada.jpg" align="left" width="100" height="100" value="0"></a>
+        </td>
+        <td>
+        <p align="left">Aplanada sin incurvación</p>
+        </td>
+        </tr>
         
-    <a href="#pagsano2"><input type="image" id="a1" onClick="pab(this.id)" src="jquery-mobile/images/pabellon/aplanada.jpg" align="left" width="100" height="100" value="0"></a><p align="left">Aplanada sin incurvación</p><br><br><br><br>
+        <tr>
+        <td>
+       <a href="#pagsano2"> <input type="image" id="a2" onClick="pab(this.id)" src="jquery-mobile/images/pabellon/superior.jpg" align="left" width="100" height="100" value="8"></a>
+       </td>
+       <td bgcolor="#ACBFFF">
+       <p align="left">Borde superior parcialmente incurvado</p>
+       	</td>
+        </tr>
         
-       <a href="#pagsano2"> <input type="image" id="a2" onClick="pab(this.id)" src="jquery-mobile/images/pabellon/superior.jpg" align="left" width="100" height="100" value="8"></a><p align="left">Borde superior parcialmente incurvado</p><br><br><br>
-       
-        <a href="#pagsano2"> <input type="image" id="a3" onClick="pab(this.id)" src="jquery-mobile/images/pabellon/todoborde.jpg" align="left" width="100" height="100" value="16"></a><p align="left">Todo el borde sup incurvado</p><br><br><br>
+        <tr>
+        <td>		
+        <a href="#pagsano2"> <input type="image" id="a3" onClick="pab(this.id)" src="jquery-mobile/images/pabellon/todoborde.jpg" align="left" width="100" height="100" value="16"></a>
+        </td>
+        <td>
+        <p align="left">Todo el borde sup incurvado</p>
+        </td>
+        </tr>
         
-         <a href="#pagsano2"><input type="image" id="a4" onClick="pab(this.id)" src="jquery-mobile/images/pabellon/incurvadopabellon.jpg" align="left" width="100" height="100" value="24"></a><p align="left">Pabellón totalmente incurvado</p><br><br><br>
-     
+        <tr>
+        <td>
+         <a href="#pagsano2"><input type="image" id="a4" onClick="pab(this.id)" src="jquery-mobile/images/pabellon/incurvadopabellon.jpg" align="left" width="100" height="100" value="24"></a>
+         </td>
+         <td bgcolor="#ACBFFF">
+         <p align="left">Pabellón totalmente incurvado</p>
+     	</td>
+        </tr>
+        </table>
      </div>
 
 
@@ -481,15 +512,44 @@ function pab(clicked_id)
      
 
      <div>
-     
-   		<a href="#pagsano4"><input type="image" id="b1" onClick="pab(this.id)" src="jquery-mobile/images/glandula/palpable.jpg" align="left" width="100" height="100" value="0"></a><p align="left">No palpable</p><br><br><br><br>
-        
-        <a href="#pagsano4"><input type="image" id="b2" onClick="pab(this.id)" src="jquery-mobile/images/glandula/menor5.jpg"  align="left" width="100" height="100" value="5"></a><p align="left">Palpable menor de 5 mm.</p><br><br><br>
-        
-        <a href="#pagsano4"><input type="image" id="b3" onClick="pab(this.id)" src="jquery-mobile/images/glandula/entre5y10.jpg" align="left" width="100" height="100" value="10"></a><p align="left">Palpable entre 5 y 10 mm.</p><br><br><br>
-        
-        <a href="#pagsano4"><input type="image" id="b4" onClick="pab(this.id)" src="jquery-mobile/images/glandula/mayor10.jpg"  align="left" width="100" height="100" value="15"></a><p align="left">Palpable mayor a 10 mm.</p><br><br><br>
-     
+    
+     	<table border="2px"> 
+           <tr>
+           <td>
+   		<a href="#pagsano4"><input type="image" id="b1" onClick="pab(this.id)" src="jquery-mobile/images/glandula/palpable.jpg" align="left" width="100" height="100" value="0"></a>
+        	</td>
+            <td>
+        <p align="left">No palpable</p>
+        	</td>
+            </tr>
+            
+            <tr>
+            <td>
+        <a href="#pagsano4"><input type="image" id="b2" onClick="pab(this.id)" src="jquery-mobile/images/glandula/menor5.jpg"  align="left" width="100" height="100" value="5"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">Palpable menor de 5 mm.</p>
+        	</td>
+            </tr>
+            
+        	<tr>
+            <td>
+        <a href="#pagsano4"><input type="image" id="b3" onClick="pab(this.id)" src="jquery-mobile/images/glandula/entre5y10.jpg" align="left" width="100" height="100" value="10"></a>
+        	</td>
+            <td>
+        <p align="left">Palpable entre 5 y 10 mm.</p>
+        	</td>
+        	</tr>
+            
+            <tr>
+            <td>
+        <a href="#pagsano4"><input type="image" id="b4" onClick="pab(this.id)" src="jquery-mobile/images/glandula/mayor10.jpg"  align="left" width="100" height="100" value="15"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">Palpable mayor a 10 mm.</p>
+     		</td>
+            </tr>
+       </table>
      </div>
      
            
@@ -514,16 +574,52 @@ function pab(clicked_id)
      
 
      <div>
-     
-   		<a href="#pagsano5"><input type="image" id="c1" onClick="pab(this.id)" src="jquery-mobile/images/texturapiel/muyfina.jpg" align="left" width="100" height="100"></a><p align="left">Muy fina gelatinosa</p><br><br><br><br>
+     	<table border="2px"> 
+           <tr>
+           <td>
+   		<a href="#pagsano5"><input type="image" id="c1" onClick="pab(this.id)" src="jquery-mobile/images/texturapiel/muyfina.jpg" align="left" width="100" height="100"></a>
+        	</td>
+            <td>
+        <p align="left">Muy fina gelatinosa</p>
+        	</td>
+            </tr>
         
-        <a href="#pagsano5"><input type="image" id="c2" onClick="pab(this.id)" src="jquery-mobile/images/texturapiel/finalisa.jpg" align="left" width="100" height="100" value="5"></a><p align="left">Fina lisa</p><br><br><br>
-        
-        <a href="#pagsano5"><input type="image" id="c3" onClick="pab(this.id)" src="jquery-mobile/images/texturapiel/masgruesa.jpg" align="left" width="100" height="100" value="10"></a><p align="left">Mas gruesa discreta descamación superficial</p><br><br><br>
-        
-        <a href="#pagsano5"><input type="image" id="c4" onClick="pab(this.id)" src="jquery-mobile/images/texturapiel/gruesagrietas.jpg" align="left" width="100" height="100" value="15"></a><p align="left">Gruesa grietas superficiales descamación de manos y pies</p><br><br><br>
-        
-         <a href="#pagsano5"><input type="image" id="c5" onClick="pab(this.id)" src="jquery-mobile/images/texturapiel/gruesagrietasape.jpg" align="left" width="100" height="100" value="20"></a><p align="left">Gruesa grieta profundas apergaminadas</p><br><br><br>
+        	<tr>
+            <td>
+        <a href="#pagsano5"><input type="image" id="c2" onClick="pab(this.id)" src="jquery-mobile/images/texturapiel/finalisa.jpg" align="left" width="100" height="100" value="5"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">Fina lisa</p>
+        	</td>
+            </tr>
+            
+            <tr>
+            <td>
+        <a href="#pagsano5"><input type="image" id="c3" onClick="pab(this.id)" src="jquery-mobile/images/texturapiel/masgruesa.jpg" align="left" width="100" height="100" value="10"></a>
+        	</td>
+            <td>
+            <p align="left">Mas gruesa discreta descamación superficial</p>
+        	</td>
+            </tr>
+            
+            <tr>
+            <td>
+        <a href="#pagsano5"><input type="image" id="c4" onClick="pab(this.id)" src="jquery-mobile/images/texturapiel/gruesagrietas.jpg" align="left" width="100" height="100" value="15"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">Gruesa grietas superficiales descamación de manos y pies</p>
+        	</td>
+            </tr>
+            
+            <tr>
+            <td>
+         <a href="#pagsano5"><input type="image" id="c5" onClick="pab(this.id)" src="jquery-mobile/images/texturapiel/gruesagrietasape.jpg" align="left" width="100" height="100" value="20"></a>
+         	</td>
+            <td>
+         <p align="left">Gruesa grieta profundas apergaminadas</p>
+         	</td>
+            </tr>
+            </table>
      </div>
      
            
@@ -543,16 +639,52 @@ function pab(clicked_id)
      
 
      <div">
-       
-   		<a href="#pagres"><input type="image" id="d1" onClick="pab(this.id)" src="jquery-mobile/images/plantares/sinpliegues.jpg" align="left" width="100" height="100" value="0"></a><p align="left">Sin pliegues</p><br><br><br><br>
+       <table border="2px"> 
+           <tr>
+           <td>
+   		<a href="#pagres"><input type="image" id="d1" onClick="pab(this.id)" src="jquery-mobile/images/plantares/sinpliegues.jpg" align="left" width="100" height="100" value="0"></a>
+        	</td>
+            <td>
+        <p align="left">Sin pliegues</p>
+        	</td>
+            </tr>
+            
+            <tr>
+            <td>
+        <a href="#pagres"><input type="image" id="d2" onClick="pab(this.id)" src="jquery-mobile/images/plantares/marcasmaldefinidas.jpg" align="left" width="100" height="100" value="5"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">Marcas mal definidas en la mitad anterior</p>
+        	</td>
+            </tr>
         
-        <a href="#pagres"><input type="image" id="d2" onClick="pab(this.id)" src="jquery-mobile/images/plantares/marcasmaldefinidas.jpg" align="left" width="100" height="100" value="5"></a><p align="left">Marcas mal definidas en la mitad anterior</p><br><br><br>
-        
-        <a href="#pagres"><input type="image" id="d3" onClick="pab(this.id)" src="jquery-mobile/images/plantares/marcasbiendefinidas.jpg" align="left" width="100" height="100" value="10"></a><p align="left">Marcas bien definidas en la 1/2 anterior, surcos en 1/2 anterior</p><br><br><br>
-        
-        <a href="#pagres"><input type="image" id="d4" onClick="pab(this.id)" src="jquery-mobile/images/plantares/surcos.jpg" align="left" width="100" height="100" value="15"></a><p align="left">Surcos en la mitad anterior</p><br><br><br>
-        
-         <a href="#pagres"><input type="image" id="d5" onClick="pab(this.id)" src="jquery-mobile/images/plantares/surcosenmas.jpg" align="left" width="100" height="100" value="20"></a><p align="left">Surcos en mas de la mitad anterior</p><br><br><br>
+        	<tr>
+            <td>
+        <a href="#pagres"><input type="image" id="d3" onClick="pab(this.id)" src="jquery-mobile/images/plantares/marcasbiendefinidas.jpg" align="left" width="100" height="100" value="10"></a>
+        	</td>
+            <td>
+        <p align="left">Marcas bien definidas en la 1/2 anterior, surcos en 1/2 anterior</p>
+        	</td>
+            </tr>
+            
+            <tr>
+            <td>
+        <a href="#pagres"><input type="image" id="d4" onClick="pab(this.id)" src="jquery-mobile/images/plantares/surcos.jpg" align="left" width="100" height="100" value="15"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">Surcos en la mitad anterior</p>
+        	</td>
+            </tr>
+            
+           	<tr>
+            <td> 
+         <a href="#pagres"><input type="image" id="d5" onClick="pab(this.id)" src="jquery-mobile/images/plantares/surcosenmas.jpg" align="left" width="100" height="100" value="20"></a>
+         	</td>
+            <td>
+          <p align="left">Surcos en mas de la mitad anterior</p>
+     		</td>
+            </tr>
+      </table>
      </div>
      
        
