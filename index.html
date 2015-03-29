@@ -17,27 +17,6 @@
 
 <body>
 
-<script>
-function backbuuton()
-{	
-document.addEventListener("deviceready", onDeviceReady, false);
-
-function onDeviceReady() {
-    document.addEventListener("backbutton", onBackKeyDown, false);
-}
-
-function onBackKeyDown() {
-    if($state.current.name == 'home'){
-        // e.preventDefault();
-        navigator.app.exitApp();
-    } else {
-       $state.go('home');
-      e.preventDefault();
-
-    }
-}
-}
-</script>
 
 
 <div data-role="page" id="page" data-theme="a">
@@ -47,7 +26,7 @@ function onBackKeyDown() {
       <div data-role="content" data-theme="a">
      	<ul data-role="listview">
         <li><a href="#pagparto" data-transition="slidedown">FECHA PROBABLE DE PARTO</a></li>
-        <li><a href="#pagcapurro" data-transition="slidedown" onClick="backbuuton">CAPURRO</a></li>
+        <li><a href="#pagcapurro" data-transition="slidedown">CAPURRO</a></li>
         <br>
         <li><a href="#pagacerca" data-transition="slidedown">ACERCA DE</a></li>
           
@@ -313,8 +292,8 @@ function onBackKeyDown() {
      </div>
       <div data-role="content" data-theme="a">
      	<ul data-role="listview">
-        <li><a href="#pagsano" data-transition="slidedown">SANO</a></li>
-         <li><a href="#pagdep" data-transition="slidedown">DEPRIMIDO</a></li><br>
+        <li><a href="#pagsano" data-transition="slidedown">CAPURRO SOMÁTICO</a></li>
+         <li><a href="#pagdep" data-transition="slidedown">CAPURRO NEUROLÓGICO</a></li><br>
          </ul>
          <br>
         <center> <a href="#page"  class="proyecto" data-transition="slidedown">PRINCIPAL</a></center>
@@ -782,6 +761,10 @@ function r()
      	</td>
         </tr>
         </table>
+        
+        <div align="center">  <a href="#pagcapurro" class="botonhoja" onClick="reply_click(this.id)" id="atras1">ATRAS</a></div>
+         <h4><div align="center">SELECCIONADO</div></h4>
+        <h4><div id="p" align="center">0</div></h4>
      </div>
 
           
@@ -842,6 +825,9 @@ function r()
        </table>
      </div>
      
+      <div align="center">  <a href="#pagdep" class="botonhoja" onClick="reply_click(this.id)" id="atras2">ATRAS</a></div>
+      	<h4><div align="center">SELECCIONADO</div></h4>
+        <h4><div id="t" align="center">0</div></h4>
            
  <center>   
       <div data-role="footer" data-theme="a">
@@ -900,6 +886,9 @@ function r()
        </table>
      </div>
      
+       <div align="center">  <a href="#pagdep2" class="botonhoja" onClick="reply_click(this.id)" id="atras3">ATRAS</a></div>
+       <h4><div align="center">SELECCIONADO</div></h4>
+        <h4><div id="f" align="center">0</div></h4>
            
  <center>   
       <div data-role="footer" data-theme="a">
@@ -965,7 +954,10 @@ function r()
             </tr>
             </table>
      </div>
-     
+     <div align="center">  <a href="#pagdep3" class="botonhoja" onClick="reply_click(this.id)" id="atras4">ATRAS</a></div>
+     	<h4><div align="center">SELECCIONADO</div></h4>
+        <h4><div id="tp" align="center">0</div></h4>
+           
            
 <center>
       <div data-role="footer" data-theme="a">
@@ -1031,7 +1023,9 @@ function r()
      		</td>
             </tr>
       </table>
-      
+      	<div align="center">  <a href="#pagdep4" class="botonhoja" onClick="reply_click(this.id)" id="atras5">ATRAS</a></div>
+        <h4><div align="center">SELECCIONADO</div></h4>
+        <h4><div id="pp" align="center">0</div></h4>
            
 <center>
       <div data-role="footer" data-theme="a">
@@ -1092,6 +1086,9 @@ function r()
             </table>
      </div>
      
+     	<div align="center">  <a href="#pagdep5" class="botonhoja" onClick="reply_click(this.id)" id="atras6">ATRAS</a></div>
+        <h4><div align="center">SELECCIONADO</div></h4>
+        <h4><div id="sb" align="center">0</div></h4>
            
 <center>
       <div data-role="footer" data-theme="a">
@@ -1150,6 +1147,10 @@ function r()
             </table>
      </div>
      
+     <div align="center">  <a href="#pagdep6" class="botonhoja" onClick="reply_click(this.id)" id="atras7">ATRAS</a></div>
+     	<h4><div align="center">SELECCIONADO</div></h4>
+        <h4><div id="sg" align="center">0</div></h4>
+     
            
 <center>
       <div data-role="footer" data-theme="a">
@@ -1171,8 +1172,8 @@ function r()
     
    <h3> <div id="valortot">0</div></h3>
     
-    <a href="#pagcapurro" class="proyecto" onClick="r()">REGRESAR</a>
-   
+    <a href="#pagcapurro" class="botonhoja" onClick="r()">REGRESAR</a>
+      
     </center>
     
     </div>
@@ -1184,6 +1185,79 @@ function r()
  </div>
 	</center>
 
+
+<!--ATRAS -->
+<script type="text/javascript">
+function reply_click(clicked_id)
+{
+    id=(clicked_id);
+		switch(id)
+		{
+			case "atras1":
+				/*var i = document.getElementById("p").innerHTML;
+				var tot=document.getElementById("valortot").innerHTML;
+				var cad = i.substring(13,15);
+				valor=(parseInt(cad)-parseInt(tot));
+				document.getElementById("valortot").innerHTML =valor;
+				alert(valor);*/
+				break;
+			case "atras2":
+				var i = document.getElementById("p").innerHTML;
+				var tot=document.getElementById("valortot").innerHTML;
+				valor=(parseInt(tot)-parseInt(i));
+				document.getElementById("valortot").innerHTML =valor;
+				alert(valor);
+		//		document.getElementById("p").innerHTML=0;
+				
+				break;
+			case "atras3":
+				var i = document.getElementById("t").innerHTML;
+				var tot=document.getElementById("valortot").innerHTML;
+				valor=(parseInt(tot)-parseInt(i));
+				document.getElementById("valortot").innerHTML =valor;
+				alert(valor);
+				//document.getElementById("t").innerHTML=0;
+				break;
+			case "atras4":
+				var i = document.getElementById("f").innerHTML;
+				var tot=document.getElementById("valortot").innerHTML;
+				valor=(parseInt(tot)-parseInt(i));
+				document.getElementById("valortot").innerHTML =valor;
+				alert(valor);
+			//	document.getElementById("f").innerHTML=0;
+				break;
+			case "atras5":
+				var i = document.getElementById("tp").innerHTML;
+				var tot=document.getElementById("valortot").innerHTML;
+				valor=(parseInt(tot)-parseInt(i));
+				document.getElementById("valortot").innerHTML =valor;
+				alert(valor);
+			//	document.getElementById("tp").innerHTML=0;
+				break;
+			case "atras6":
+				var i = document.getElementById("pp").innerHTML;
+				var tot=document.getElementById("valortot").innerHTML;
+				valor=(parseInt(tot)-parseInt(i));
+				document.getElementById("valortot").innerHTML =valor;
+				alert(valor);
+				//document.getElementById("pp").innerHTML=0;
+				break;
+			case "atras7":
+				var i = document.getElementById("sb").innerHTML;
+				var tot=document.getElementById("valortot").innerHTML;
+				valor=(parseInt(tot)-parseInt(i));
+				document.getElementById("valortot").innerHTML =valor;
+				alert(valor);
+			//	document.getElementById("sb").innerHTML=0;
+				break;
+			
+		}
+}
+</script>
+
+
+
+<!-- Script seprimido-->
 
 <script type="text/livescript">
 function capdep(clicked_id)
@@ -1202,125 +1276,156 @@ function capdep(clicked_id)
 		case "e1":
 			suma=0
 			s=0
+			document.getElementById("p").innerHTML =0;
 			break;
 		case "e2":
 			suma=8
+			document.getElementById("p").innerHTML =8;
 			s=0
 			break;
 		case "e3":
 			suma=16
+			document.getElementById("p").innerHTML =16;
 			s=0
 			break;
 		case "e4":
 			suma=24
+			document.getElementById("p").innerHTML = 24;
 			s=0
 			break;
 		case "f1":
 			suma=0
+			document.getElementById("t").innerHTML =0;
 			s=0
 			break;
 		case "f2":
 			suma=5
+			document.getElementById("t").innerHTML =5;
 			s=0
 			break;
 		case "f3":
 			suma=10
+			document.getElementById("t").innerHTML =10;
 			s=0
 			break;
 		case "f4":
 			suma=15
+			document.getElementById("t").innerHTML =15;
 			s=0
 			break;
 		case "g1":
 			suma=0
+			document.getElementById("f").innerHTML =0;
 			s=0
 			break;
 		case "g2":
 			suma=5
+			document.getElementById("f").innerHTML =5;
 			s=0
 			break;
 		case "g3":
 			suma=10
+			document.getElementById("f").innerHTML =10;
 			s=0
 			break;
 		case "g4":
 			suma=15
+			document.getElementById("f").innerHTML =15;
 			s=0
 			break;
 		case "g5":
 			s=0
+			document.getElementById("f").innerHTML =20;
 			suma=20
 			break;
 		case "h1":
 			suma=0
+			document.getElementById("tp").innerHTML=0;
 			s=0
 			break;
 		case "h2":
 			suma=5
+			document.getElementById("tp").innerHTML=5;
 			s=0
 			break;
 		case "h3":
 			suma=10
+			document.getElementById("tp").innerHTML =10;
 			s=0
 			break;
 		case "h4":
 			suma=15
+			document.getElementById("tp").innerHTML =15;
 			s=0
 			break;
 		case "h5":
 			suma=20
+			document.getElementById("tp").innerHTML =20;
 			s=0
 			break;
 		case "i1":
 			suma=0
+			document.getElementById("pp").innerHTML =0;
 			s=0
 			break;
 		case "i2":
 			suma=5
+			document.getElementById("pp").innerHTML =5;
 			s=0
 			break;
 		case "i3":
 			suma=10
+			document.getElementById("pp").innerHTML =10;
 			s=0
 			break;
 		case "i4":
 			suma=15
+			document.getElementById("pp").innerHTML =15;
 			s=0
 			break;
 		case "i5":
 			suma=20
+			document.getElementById("pp").innerHTML =20;
 			s=0
 			break;
 		case "j1":
 			suma=0
+			document.getElementById("sb").innerHTML =0;
 			s=0
 			break;
 		case "j2":
 			suma=6
+			document.getElementById("sb").innerHTML =6;
 			s=0
 			break;
 		case "j3":
 			s=0
+			document.getElementById("sb").innerHTML =12;
 			suma=12
 			break;
 		case "j4":
 			suma=18
+			document.getElementById("sb").innerHTML =18;
 			s=0
 			break;
 		case "k1":
 			suma=0
+			document.getElementById("sg").innerHTML =0;
 			s=1
 			break;
 		case "k2":
 			suma=4
+			document.getElementById("sg").innerHTML =4;
 			s=1
 			break;
 		case "k3":
 			suma=8
+			document.getElementById("sg").innerHTML =8;
 			s=1
 			break;
 		case "k4":
 			suma=12
+			document.getElementById("sg").innerHTML =12;
 			s=1
 			break;
 		}
@@ -1330,7 +1435,8 @@ function capdep(clicked_id)
 		total=(parseInt(total)+parseInt(suma));
 			
 		var a=document.getElementById("valortot").innerHTML =total;
-				
+		var b=parseInt(a);
+		
 		if (s==1)
 	{
 		total = document.getElementById("valortot").innerHTML;
@@ -1352,10 +1458,7 @@ function capdep(clicked_id)
 		} else{
 			var r =r.substring(0,4); 
 		}
-		
-	
-		a=document.getElementById("valortot").innerHTML =r+" SEMANAS";
-		
+			document.getElementById("valortot").innerHTML =r+" SEMANAS";	
 	}
 		
 }

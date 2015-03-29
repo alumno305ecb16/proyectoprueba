@@ -37,5 +37,49 @@
 }
 
 
+.botonhoja {
+	-moz-box-shadow:inset -2px -9px 12px 0px #97c4fe;
+	-webkit-box-shadow:inset -2px -9px 12px 0px #97c4fe;
+	box-shadow:inset -2px -9px 12px 0px #97c4fe;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #0062ff) );
+	background:-moz-linear-gradient( center top, #3d94f6 5%, #0062ff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#0062ff');
+	background-color:#3d94f6;
+	-webkit-border-top-left-radius:42px;
+	-moz-border-radius-topleft:42px;
+	border-top-left-radius:42px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:42px;
+	-moz-border-radius-bottomright:42px;
+	border-bottom-right-radius:42px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0.86px;
+	border:3px solid #337fed;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial Black;
+	font-size:13px;
+	font-weight:bold;
+	font-style:normal;
+	height:52px;
+	line-height:52px;
+	width:89px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:-6px -1px 0px #1570cd;
+}
+.classname:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #0062ff), color-stop(1, #3d94f6) );
+	background:-moz-linear-gradient( center top, #0062ff 5%, #3d94f6 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0062ff', endColorstr='#3d94f6');
+	background-color:#0062ff;
+}.classname:active {
+	position:relative;
+	top:1px;
+}</style>
 
 
