@@ -25,7 +25,7 @@
       <div data-role="content" data-theme="a">
      	<ul data-role="listview">
         <li><a href="#pagparto" data-transition="slidedown">FECHA PROBABLE DE PARTO</a></li>
-        <li><a href="#pagcapurro" data-transition="slidedown">CAPURRO</a></li>
+        <li><a href="#pagcapurro" data-transition="slidedown" onClick="ocultar">CAPURRO</a></li>
         <br>
         <li><a href="#pagacerca" data-transition="slidedown">ACERCA DE</a></li>
           
@@ -39,7 +39,7 @@
 <div data-role="page" id="pagparto" data-add-back-btn="true" data-theme="a">
 	<div data-role="header" data-theme="a">
     
-    		<h1>FECHA PROBABLE DE PARTO</h1>
+    		<p align="center">FECHA PROBABLE DE PARTO</p>
      </div>
        
    <div>
@@ -80,10 +80,9 @@
          <OPTION VALUE=29>29</OPTION>
          <OPTION VALUE=30>30</OPTION>
          <OPTION VALUE=31>31</OPTION>
-         
+       	</p>  
        </SELECT>
-       </p>
-       
+              
        </form>
        
        <form name="mm">
@@ -103,9 +102,8 @@
          <OPTION VALUE=12>DICIEMBRE</OPTION>
          </p>
          </SELECT>
-         </form>
-         
-      
+       </form>
+          
       <form name="mm">
        <SELECT NAME="yyyy" id="yyyy" class="form_select"> 
            <p>
@@ -122,12 +120,8 @@
     
      </center>
      
-
     </div>
-    
-    
-    
-    
+                
     <script>
 	function operaciones()
 	{
@@ -149,20 +143,15 @@
 		di= parseInt(dia);
 		me= parseInt(mes); 
 		yy= parseInt(yyy);
-		
-		
-		
+						
 		var m;
-		
-		
+			
 		var d=di;
 		var xmes;
 		var xy
-		
-			
+					
 		for(var i=1;i<=287;i++)
 		{
-			
 			
 			if(d==m)
 				{
@@ -243,9 +232,7 @@
 					xy=xy+1
 				}
 		}
-			
-		
-				
+					
 		d=d+1
 		
 		if(i==273)
@@ -262,21 +249,15 @@
 		
 		if(d>m)
 		{
-		alert("FECHA INVALIDA")
+		alert("FECHA INVALIDA") 
 			document.getElementById("res").innerHTML ="";
 		}else{
 			document.getElementById("res").innerHTML =fecha1+"  -  "+fecha2;
-		}
-		
-		
-		
-		
+		}						
 	}
     </script>
        
-    
-    
-    
+                   
 <center>
 <form>
 <br>
@@ -326,7 +307,6 @@
   </center>
   
   
-
 <script type="text/livescript">
 function pab(clicked_id)
 {
@@ -420,7 +400,6 @@ function pab(clicked_id)
 			
 		var a=document.getElementById("valortotal").innerHTML =total;
 		
-		//alert(a)
 	
 	if (s==1)
 	{
@@ -428,18 +407,16 @@ function pab(clicked_id)
 		t=(parseInt(total)+204)
 		var r=t/7
 		
-		//alert("resultado "+r)
+		
 		r=r.toString();
 				
 		var numcaracteres = r.length;
 		var num=parseInt(numcaracteres);
 		
 		
-		
 		var cadena = r.charAt(3);
-		
-		//alert("numero seleccionado "+cadena)
-			var cad=parseInt(cadena);
+				
+		var cad=parseInt(cadena);
 			
 		if (cad>=7)
 		{
@@ -447,10 +424,7 @@ function pab(clicked_id)
 		} else{
 			var r =r.substring(0,4); 
 		}
-		
-	//	alert("mas1 "+r)
-		
-			
+							
 		a=document.getElementById("valortotal").innerHTML =r+" SEMANAS";
 		
 	}
@@ -694,10 +668,7 @@ function pab(clicked_id)
      		</td>
             </tr>
       </table>
-    
-     
-       
-           
+                
 <center>
       <div data-role="footer" data-theme="a">
    	<h4>AREA DE SALUD</h4>
@@ -743,8 +714,7 @@ function r()
 
 		<!-- DEPRIMIDO-->
 
-		
-        
+		        
         <div data-role="page" id="pagdep" data-add-back-btn="true" data-theme="a">
 	<div data-role="header" data-theme="a">
         		<h1>FORMA DE LA OREJA(PABELLÓN)</h1>
@@ -792,9 +762,7 @@ function r()
         </table>
      </div>
 
-
-   
-           
+          
  <center> 
       <div data-role="footer" data-theme="a">
    	<h4>AREA DE SALUD</h4>
@@ -860,7 +828,6 @@ function r()
      </div>
      
 </center>     
-
 
 <!-- DEP 3-->
 
@@ -1042,9 +1009,7 @@ function r()
      		</td>
             </tr>
       </table>
-    
-     
-       
+      
            
 <center>
       <div data-role="footer" data-theme="a">
@@ -1198,9 +1163,6 @@ function r()
 	</center>
 
 
-
-
-
 <script type="text/livescript">
 function capdep(clicked_id)
 {
@@ -1346,27 +1308,20 @@ function capdep(clicked_id)
 		total=(parseInt(total)+parseInt(suma));
 			
 		var a=document.getElementById("valortot").innerHTML =total;
-		
-	//	alert(a)
-		
-	
+				
 		if (s==1)
 	{
 		total = document.getElementById("valortot").innerHTML;
 		t=(parseInt(total)+204)
 		var r=t/7
 		
-		//alert("resultado "+r)
 		r=r.toString();
 				
 		var numcaracteres = r.length;
 		var num=parseInt(numcaracteres);
 		
-		
-		
 		var cadena = r.charAt(3);
 		
-		//alert("numero seleccionado "+cadena)
 			var cad=parseInt(cadena);
 			
 		if (cad>=7)
@@ -1376,16 +1331,24 @@ function capdep(clicked_id)
 			var r =r.substring(0,4); 
 		}
 		
-	//	alert("mas1 "+r)
-		
-			
+	
 		a=document.getElementById("valortot").innerHTML =r+" SEMANAS";
 		
 	}
 		
 }
 </script>
-    
-     
+<script>
+
+function ocultar()
+{
+    window.addEventListener("load",function() {
+      setTimeout(function(){
+        window.scrollTo(0, 1);
+      }, 0);
+    });
+}
+</script>
+
 </body>
 </html>

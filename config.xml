@@ -10,7 +10,7 @@
     <name>PROYECTO</name>
 
     <description>
-       APLICACION AREA DE LA SALID
+       APLICACIÓN DE AREA DE SALUD
     </description>
 	
 	
@@ -19,6 +19,8 @@
 	
     <author href="https://build.phonegap.com" email="support@phonegap.com">
         Alejandro Ivan Romero Portillo
+		Jonathan Mialma Martinez
+		Edher Eduardo Muñoz Mancera
     </author>
 	
         <gap:plugin name="org.apache.cordova.device" version="0.2.12" />
