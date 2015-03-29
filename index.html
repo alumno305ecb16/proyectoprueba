@@ -251,6 +251,7 @@
 		if(d>m)
 		{
 		alert("FECHA INVALIDA") 
+	
 			document.getElementById("res").innerHTML ="";
 		}else{
 			document.getElementById("res").innerHTML =fecha1+"  -  "+fecha2;
@@ -716,7 +717,7 @@ function r()
 		<!-- DEPRIMIDO-->
 
 		        
-        <div data-role="page" id="pagdep" data-add-back-btn="true" data-theme="a">
+        <div data-role="page" id="pagdep" data-theme="a">
 	<div data-role="header" data-theme="a">
         		<h1>FORMA DE LA OREJA(PABELLÓN)</h1>
      </div>
@@ -741,6 +742,9 @@ function r()
        <td bgcolor="#ACBFFF">
        <p align="left">Borde superior parcialmente incurvado</p>
        	</td>
+        <td>
+        <div align="center">  <a href="#pagcapurro" class="botonhoja" onClick="reply_click(this.id)" id="atras1">ATRAS</a></div>
+        </td>
         </tr>
         
         <tr>
@@ -762,7 +766,7 @@ function r()
         </tr>
         </table>
         
-        <div align="center">  <a href="#pagcapurro" class="botonhoja" onClick="reply_click(this.id)" id="atras1">ATRAS</a></div>
+        
          <h4><div align="center">SELECCIONADO</div></h4>
         <h4><div id="p" align="center">0</div></h4>
      </div>
@@ -776,9 +780,9 @@ function r()
      
 </center>
 
+<!-- DEP2 -->
 
-
- <div data-role="page" id="pagdep2" data-add-back-btn="true" data-theme="a">
+ <div data-role="page" id="pagdep2" data-theme="a">
 	<div data-role="header" data-theme="a">
         		<h1>TAMAÑO DE GLÁNDULA</h1>
      </div>
@@ -803,6 +807,9 @@ function r()
             <td bgcolor="#ACBFFF">
         <p align="left">Palpable menor de 5 mm.</p>
         	</td>
+            <td>
+             <div align="center">  <a href="#pagdep" class="botonhoja" onClick="reply_click(this.id)" id="atras2">ATRAS</a></div>
+            </td>
             </tr>
             
         	<tr>
@@ -812,6 +819,9 @@ function r()
             <td>
         <p align="left">Palpable entre 5 y 10 mm.</p>
         	</td>
+            <td>
+             <a href="#pagcapurro" class="botonhoja" onClick="r()">REGRESAR</a>
+            </td>
         	</tr>
             
             <tr>
@@ -825,7 +835,7 @@ function r()
        </table>
      </div>
      
-      <div align="center">  <a href="#pagdep" class="botonhoja" onClick="reply_click(this.id)" id="atras2">ATRAS</a></div>
+     
       	<h4><div align="center">SELECCIONADO</div></h4>
         <h4><div id="t" align="center">0</div></h4>
            
@@ -839,7 +849,7 @@ function r()
 
 <!-- DEP 3-->
 
-<div data-role="page" id="pagdep3" data-add-back-btn="true" data-theme="a">
+<div data-role="page" id="pagdep3" data-theme="a">
 	<div data-role="header" data-theme="a">
         		<h1>FORMACIÓN DEL PEZÓN</h1>
      </div>
@@ -864,6 +874,9 @@ function r()
             <td bgcolor="#ACBFFF">
         <p align="left">Diametro menor de 7.5 mm Areola lisa y chata</p>
         	</td>
+            <td>
+            <div align="center">  <a href="#pagdep2" class="botonhoja" onClick="reply_click(this.id)" id="atras3">ATRAS</a></div>
+            </td>
             </tr>
             
         	<tr>
@@ -873,6 +886,9 @@ function r()
             <td>
         <p align="left">Diametro mayor de 7.5 Areola punteada (Borde no elevado)</p>
         	</td>
+            <td>
+             <a href="#pagcapurro" class="botonhoja" onClick="r()">REGRESAR</a>
+            </td>
         	</tr>
             
             <tr>
@@ -886,7 +902,7 @@ function r()
        </table>
      </div>
      
-       <div align="center">  <a href="#pagdep2" class="botonhoja" onClick="reply_click(this.id)" id="atras3">ATRAS</a></div>
+       
        <h4><div align="center">SELECCIONADO</div></h4>
         <h4><div id="f" align="center">0</div></h4>
            
@@ -900,7 +916,7 @@ function r()
 
 <!-- DEP 4-->
 
- <div data-role="page" id="pagdep4" data-add-back-btn="true" data-theme="a">
+ <div data-role="page" id="pagdep4" data-theme="a">
 	<div data-role="header" data-theme="a">
         		<h1>TEXTURA DE LA PIEL</h1>
      </div>
@@ -924,6 +940,9 @@ function r()
             <td bgcolor="#ACBFFF">
         <p align="left">Fina lisa</p>
         	</td>
+            <td>
+             <div align="center">  <a href="#pagdep3" class="botonhoja" onClick="reply_click(this.id)" id="atras4">ATRAS</a></div>
+            </td>
             </tr>
             
             <tr>
@@ -933,6 +952,9 @@ function r()
             <td>
             <p align="left">Mas gruesa discreta descamación superficial</p>
         	</td>
+            <td>
+             <a href="#pagcapurro" class="botonhoja" onClick="r()">REGRESAR</a>
+            </td>
             </tr>
             
             <tr>
@@ -954,7 +976,7 @@ function r()
             </tr>
             </table>
      </div>
-     <div align="center">  <a href="#pagdep3" class="botonhoja" onClick="reply_click(this.id)" id="atras4">ATRAS</a></div>
+    
      	<h4><div align="center">SELECCIONADO</div></h4>
         <h4><div id="tp" align="center">0</div></h4>
            
@@ -970,7 +992,7 @@ function r()
   
   <!-- DEP5 -->
 
-<div data-role="page" id="pagdep5" data-add-back-btn="true" data-theme="a">
+<div data-role="page" id="pagdep5" data-theme="a">
 	<div data-role="header" data-theme="a">
         		<h1>PLIEGUES PLANTARES</h1>
      </div>
@@ -994,6 +1016,9 @@ function r()
             <td bgcolor="#ACBFFF">
         <p align="left">Marcas mal definidas en la mitad anterior</p>
         	</td>
+            <td>
+         <div align="center">  <a href="#pagdep4" class="botonhoja" onClick="reply_click(this.id)" id="atras5">ATRAS</a></div>
+            </td>
             </tr>
         
         	<tr>
@@ -1003,6 +1028,9 @@ function r()
             <td>
         <p align="left">Marcas bien definidas en la 1/2 anterior, surcos en 1/2 anterior</p>
         	</td>
+            <td>
+             <a href="#pagcapurro" class="botonhoja" onClick="r()">REGRESAR</a>
+            </td>
             </tr>
             
             <tr>
@@ -1023,7 +1051,7 @@ function r()
      		</td>
             </tr>
       </table>
-      	<div align="center">  <a href="#pagdep4" class="botonhoja" onClick="reply_click(this.id)" id="atras5">ATRAS</a></div>
+      
         <h4><div align="center">SELECCIONADO</div></h4>
         <h4><div id="pp" align="center">0</div></h4>
            
@@ -1039,7 +1067,7 @@ function r()
 <!-- DEP 6-->
 
 
- <div data-role="page" id="pagdep6" data-add-back-btn="true" data-theme="a">
+ <div data-role="page" id="pagdep6" data-theme="a">
 	<div data-role="header" data-theme="a">
         		<h1>SIGNO DE LA BUFANDA</h1>
      </div>
@@ -1063,6 +1091,10 @@ function r()
             <td bgcolor="#ACBFFF">
         <p align="left">El codo queda a nivel del apéndice xifoides</p>
         	</td>
+            
+            <td>
+         <div align="center">  <a href="#pagdep5" class="botonhoja" onClick="reply_click(this.id)" id="atras6">ATRAS</a></div>
+            </td>
             </tr>
             
             <tr>
@@ -1072,6 +1104,9 @@ function r()
             <td>
             <p align="left">El codo queda a nivel del pezón del mismo lado</p>
         	</td>
+            <td>
+             <a href="#pagcapurro" class="botonhoja" onClick="r()">REGRESAR</a>
+            </td>
             </tr>
             
             <tr>
@@ -1086,9 +1121,9 @@ function r()
             </table>
      </div>
      
-     	<div align="center">  <a href="#pagdep5" class="botonhoja" onClick="reply_click(this.id)" id="atras6">ATRAS</a></div>
-        <h4><div align="center">SELECCIONADO</div></h4>
-        <h4><div id="sb" align="center">0</div></h4>
+     	
+        <h4 align="left"><div align="center">SELECCIONADO</div></h4>
+        <h4 align="left"><div id="sb" align="center">0</div></h4>
            
 <center>
       <div data-role="footer" data-theme="a">
@@ -1100,7 +1135,7 @@ function r()
   
   <!-- 7 DEP -->
     
-     <div data-role="page" id="pagdep7" data-add-back-btn="true" data-theme="a">
+     <div data-role="page" id="pagdep7" data-theme="a">
 	<div data-role="header" data-theme="a">
         		<h1>SIGNO CABEZA EN GOTA</h1>
      </div>
@@ -1124,8 +1159,13 @@ function r()
             <td bgcolor="#ACBFFF">
         <p align="left">control céfatico parcial, angulo entre 180°-270°</p>
         	</td>
+           
+             <td>
+             <div align="center">  <a href="#pagdep6" class="botonhoja" onClick="reply_click(this.id)" id="atras7">ATRAS</a></div>
+            </td>
+           
             </tr>
-            
+                        
             <tr>
             <td>
         <a href="#pagresdep"><input type="image" id="k3" onClick="capdep(this.id)" src="jquery-mobile/images/gota/180gradaos.jpg" align="left" width="100" height="100" value="10"></a>
@@ -1133,6 +1173,9 @@ function r()
             <td>
             <p align="left">Capaz de mantener cabeza en linea con el cuerpo 180°</p>
         	</td>
+            <td>
+            <a href="#pagcapurro" class="botonhoja" onClick="r()">REGRESAR</a>
+            </td>
             </tr>
             
             <tr>
@@ -1147,7 +1190,7 @@ function r()
             </table>
      </div>
      
-     <div align="center">  <a href="#pagdep6" class="botonhoja" onClick="reply_click(this.id)" id="atras7">ATRAS</a></div>
+    
      	<h4><div align="center">SELECCIONADO</div></h4>
         <h4><div id="sg" align="center">0</div></h4>
      
@@ -1172,6 +1215,8 @@ function r()
     
    <h3> <div id="valortot">0</div></h3>
     
+     <a href="#pagdep7" class="botonhoja" onClick="reply_click(this.id)" id="atras8">ATRAS</a>
+     
     <a href="#pagcapurro" class="botonhoja" onClick="r()">REGRESAR</a>
       
     </center>
@@ -1193,20 +1238,27 @@ function reply_click(clicked_id)
     id=(clicked_id);
 		switch(id)
 		{
-			case "atras1":
-				/*var i = document.getElementById("p").innerHTML;
-				var tot=document.getElementById("valortot").innerHTML;
-				var cad = i.substring(13,15);
-				valor=(parseInt(cad)-parseInt(tot));
-				document.getElementById("valortot").innerHTML =valor;
-				alert(valor);*/
+			case "atras8":
+		
+				var a=document.getElementById("p").innerHTML;
+				var b=document.getElementById("t").innerHTML;
+				var c=document.getElementById("f").innerHTML;
+				var d=document.getElementById("tp").innerHTML;
+				var e=document.getElementById("pp").innerHTML;
+				var f=document.getElementById("sb").innerHTML;
+				var g = document.getElementById("sg").innerHTML;
+				
+				var suma=parseInt(a)+parseInt(b)+parseInt(c)+parseInt(d)+parseInt(e)+parseInt(f)+parseInt(g)
+				suma=suma-parseInt(g)
+				document.getElementById("valortot").innerHTML =suma;
+				
 				break;
 			case "atras2":
 				var i = document.getElementById("p").innerHTML;
 				var tot=document.getElementById("valortot").innerHTML;
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
-				alert(valor);
+			//	alert(valor);
 		//		document.getElementById("p").innerHTML=0;
 				
 				break;
@@ -1215,7 +1267,7 @@ function reply_click(clicked_id)
 				var tot=document.getElementById("valortot").innerHTML;
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
-				alert(valor);
+		//		alert(valor);
 				//document.getElementById("t").innerHTML=0;
 				break;
 			case "atras4":
@@ -1223,7 +1275,7 @@ function reply_click(clicked_id)
 				var tot=document.getElementById("valortot").innerHTML;
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
-				alert(valor);
+			//	alert(valor);
 			//	document.getElementById("f").innerHTML=0;
 				break;
 			case "atras5":
@@ -1231,7 +1283,7 @@ function reply_click(clicked_id)
 				var tot=document.getElementById("valortot").innerHTML;
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
-				alert(valor);
+			//	alert(valor);
 			//	document.getElementById("tp").innerHTML=0;
 				break;
 			case "atras6":
@@ -1239,7 +1291,7 @@ function reply_click(clicked_id)
 				var tot=document.getElementById("valortot").innerHTML;
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
-				alert(valor);
+			//	alert(valor);
 				//document.getElementById("pp").innerHTML=0;
 				break;
 			case "atras7":
@@ -1247,7 +1299,7 @@ function reply_click(clicked_id)
 				var tot=document.getElementById("valortot").innerHTML;
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
-				alert(valor);
+			//	alert(valor);
 			//	document.getElementById("sb").innerHTML=0;
 				break;
 			
