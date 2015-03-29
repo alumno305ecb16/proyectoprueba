@@ -20,7 +20,22 @@
 <script>
 function backbuuton()
 {	
-document.addEventListener('backbutton', onBackKeyDown, false);
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+    document.addEventListener("backbutton", onBackKeyDown, false);
+}
+
+function onBackKeyDown() {
+    if($state.current.name == 'home'){
+        // e.preventDefault();
+        navigator.app.exitApp();
+    } else {
+       $state.go('home');
+      e.preventDefault();
+
+    }
+}
 }
 </script>
 
