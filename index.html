@@ -47,7 +47,7 @@
        
    <div>
    <br>
-    <div align="left"><a href="#page" class="proyecto"> INICIO</a></div>
+    <div align="left"><a href="#page" class="proyecto" onClick="limpiarembarazo()"> INICIO</a></div>
      <center>
      <h3>FECHA DE LA ULTIMA MENSTRUACION (FUM)</h3>
       
@@ -127,7 +127,15 @@
      </center>
      
     </div>
-                
+            <script>
+			function limpiarembarazo()
+			{
+				document.getElementById("dd").innerHTML=1;
+				document.getElementById("mm").innerHTML="ENERO";
+				document.getElementById("yyyy").innerHTML=2014;
+				document.getElementById("res").innerHTML ="";
+			}
+			</script>    
     <script>
 	function operaciones()
 	{
@@ -789,7 +797,7 @@ function r(paguina)
 				
 				var a=document.getElementById("p").innerHTML;
 				var b=document.getElementById("t").innerHTML;
-				var c=document.getElementById("f").innerHTML;
+				var c=document.getElementById("f50").innerHTML;
 				var d=document.getElementById("tp").innerHTML;
 				var e=document.getElementById("pp").innerHTML;
 				
@@ -804,12 +812,13 @@ function r(paguina)
 	a=document.getElementById("valortotal").innerHTML =0;
 	a=document.getElementById("valortot").innerHTML =0;
 		document.getElementById("t").innerHTML=0;
-		document.getElementById("f").innerHTML=0;
+		document.getElementById("f50").innerHTML=0;
 		document.getElementById("tp").innerHTML=0;
 		document.getElementById("sg").innerHTML=0;
 		document.getElementById("pp").innerHTML=0;
 		document.getElementById("sb").innerHTML=0;
 		document.getElementById("p").innerHTML=0;
+		document.getElementById("parte").innerHTML="";
 	}
 		
 }
@@ -1020,7 +1029,7 @@ function r(paguina)
      
        
        <h4><div align="center">SELECCIONADO</div></h4>
-        <h4><div id="f" align="center">0</div></h4>
+        <h4><div id="f50" align="center">0</div></h4>
            
  <center>   
       <div data-role="footer" data-theme="a">
@@ -1374,7 +1383,7 @@ function reply_click(clicked_id)
 			{				
 				var a=document.getElementById("p").innerHTML;
 				var b=document.getElementById("t").innerHTML;
-				var c=document.getElementById("f").innerHTML;
+				var c=document.getElementById("f50").innerHTML;
 				var d=document.getElementById("tp").innerHTML;
 				var e=document.getElementById("pp").innerHTML;
 				var f=document.getElementById("sb").innerHTML;
@@ -1384,11 +1393,12 @@ function reply_click(clicked_id)
 				suma=suma-parseInt(g)
 				document.getElementById("valortot").innerHTML =suma;
 				window.location=('#pagdep7');
-			}else{
+			}else if(rr=="1 PARTE")
+			{
 					window.location=('#pagdep5');
 				var a=document.getElementById("p").innerHTML;
 				var b=document.getElementById("t").innerHTML;
-				var c=document.getElementById("f").innerHTML;
+				var c=document.getElementById("f50").innerHTML;
 				var d=document.getElementById("tp").innerHTML;
 				var e=document.getElementById("pp").innerHTML;
 			
@@ -1416,11 +1426,11 @@ function reply_click(clicked_id)
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
 		//		alert(valor);
-				document.getElementById("f").innerHTML=0;
+				document.getElementById("f50").innerHTML=0;
 				//alert(a);
 				break;
 			case "atras4":
-				var i = document.getElementById("f").innerHTML;
+				var i = document.getElementById("f50").innerHTML;
 				var tot=document.getElementById("valortot").innerHTML;
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
@@ -1521,27 +1531,27 @@ function capdep(clicked_id)
 			break;
 		case "g1":
 			suma=0
-			document.getElementById("f").innerHTML=0;
+			document.getElementById("f50").innerHTML=0;
 			s=0
 			break;
 		case "g2":
 			suma=5
-			document.getElementById("f").innerHTML=5;
+			document.getElementById("f50").innerHTML=5;
 			s=0
 			break;
 		case "g3":
 			suma=10
-			document.getElementById("f").innerHTML=10;
+			document.getElementById("f50").innerHTML=10;
 			s=0
 			break;
 		case "g4":
 			suma=15
-			document.getElementById("f").innerHTML=15;
+			document.getElementById("f50").innerHTML=15;
 			s=0
 			break;
 		case "g5":
 			s=0
-			document.getElementById("f").innerHTML=20;
+			document.getElementById("f50").innerHTML=20;
 		
 			suma=20
 			break;
