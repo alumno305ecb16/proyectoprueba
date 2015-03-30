@@ -41,7 +41,7 @@
 	<div data-role="header" data-theme="a">
    
     		
-    		<p align="center">FECHA PROBABLE DE PARTO</p>+
+    		<p align="center">FECHA PROBABLE DE PARTO</p>
           
      </div>
        
@@ -1332,13 +1332,16 @@ function r(paguina)
     <div>
     <center>
     <br>
-    
+      <div align="left" id="parte"></div>
+      <br>
    <h3> <div id="valortot">0</div></h3>
     
-     <a href="#pagdep7" class="botonhoja" onClick="reply_click(this.id)" id="atras8">ATRAS</a>
+     <a href="#paguina.html" class="botonhoja" onClick="reply_click(this.id)" id="atras8">ATRAS</a>
      
     <a href="paguina.html" class="botonhoja" id="botfin" onClick="r(this.href);return false">REGRESAR</a>
-      
+    <br>
+    <font color="#FFFFFF"><h3 align="center" id="capurroclasificacion" style="background-color:#F00"> </h3></font>
+    
     </center>
     
     </div>
@@ -1352,6 +1355,8 @@ function r(paguina)
 
 
 <!--ATRAS -->
+
+
 <script type="text/javascript">
 function reply_click(clicked_id)
 {
@@ -1362,7 +1367,11 @@ function reply_click(clicked_id)
 			 	document.getElementById("p").innerHTML=0;
 		//	alert(a);
 			case "atras8":
-		
+			boton=document.getElementById("botfin").text;
+			rr=document.getElementById("parte").innerHTML;
+			
+			if (rr=="2 PARTE")
+			{				
 				var a=document.getElementById("p").innerHTML;
 				var b=document.getElementById("t").innerHTML;
 				var c=document.getElementById("f").innerHTML;
@@ -1374,6 +1383,22 @@ function reply_click(clicked_id)
 				var suma=parseInt(a)+parseInt(b)+parseInt(c)+parseInt(d)+parseInt(e)+parseInt(f)+parseInt(g)
 				suma=suma-parseInt(g)
 				document.getElementById("valortot").innerHTML =suma;
+				window.location=('#pagdep7');
+			}else{
+					window.location=('#pagdep5');
+				var a=document.getElementById("p").innerHTML;
+				var b=document.getElementById("t").innerHTML;
+				var c=document.getElementById("f").innerHTML;
+				var d=document.getElementById("tp").innerHTML;
+				var e=document.getElementById("pp").innerHTML;
+			
+				
+				var suma=parseInt(a)+parseInt(b)+parseInt(c)+parseInt(d)+parseInt(e);
+				suma=suma-parseInt(e)
+				document.getElementById("valortot").innerHTML =suma;
+			}
+				
+			
 				
 				break;
 			case "atras2":
@@ -1486,37 +1511,38 @@ function capdep(clicked_id)
 			break;
 		case "f3":
 			suma=10
-			document.getElementById("t").innerHTML =10;
+			document.getElementById("t").innerHTML=10;
 			s=0
 			break;
 		case "f4":
 			suma=15
-			document.getElementById("t").innerHTML =15;
+			document.getElementById("t").innerHTML=15;
 			s=0
 			break;
 		case "g1":
 			suma=0
-			document.getElementById("f").innerHTML =0;
+			document.getElementById("f").innerHTML=0;
 			s=0
 			break;
 		case "g2":
 			suma=5
-			document.getElementById("f").innerHTML =5;
+			document.getElementById("f").innerHTML=5;
 			s=0
 			break;
 		case "g3":
 			suma=10
-			document.getElementById("f").innerHTML =10;
+			document.getElementById("f").innerHTML=10;
 			s=0
 			break;
 		case "g4":
 			suma=15
-			document.getElementById("f").innerHTML =15;
+			document.getElementById("f").innerHTML=15;
 			s=0
 			break;
 		case "g5":
 			s=0
-			document.getElementById("f").innerHTML =20;
+			document.getElementById("f").innerHTML=20;
+		
 			suma=20
 			break;
 		case "h1":
@@ -1546,25 +1572,31 @@ function capdep(clicked_id)
 			break;
 		case "i1":
 			suma=0
+			
 			document.getElementById("pp").innerHTML =0;
+			document.getElementById("parte").innerHTML="1 PARTE";
 			s=1
 			break;
 		case "i2":
 			suma=5
 			document.getElementById("pp").innerHTML =5;
 			s=1
+			document.getElementById("parte").innerHTML="1 PARTE";
 			break;
 		case "i3":
 			suma=10
 			document.getElementById("pp").innerHTML =10;
+			document.getElementById("parte").innerHTML="1 PARTE";
 			s=1
 			break;
 		case "i4":
 			suma=15
 			document.getElementById("pp").innerHTML =15;
+			document.getElementById("parte").innerHTML="1 PARTE";
 			s=1
 			break;
 		case "i5":
+			document.getElementById("parte").innerHTML="1 PARTE";
 			suma=20
 			document.getElementById("pp").innerHTML =20;
 			s=1
@@ -1590,26 +1622,31 @@ function capdep(clicked_id)
 			s=0
 			break;
 		case "k1":
+			document.getElementById("parte").innerHTML="2 PARTE";
 			suma=0
 			document.getElementById("sg").innerHTML =0;
 			s=1
 			break;
 		case "k2":
+			document.getElementById("parte").innerHTML="2 PARTE";
 			suma=4
 			document.getElementById("sg").innerHTML =4;
 			s=1
 			break;
 		case "k3":
+			document.getElementById("parte").innerHTML="2 PARTE";
 			suma=8
 			document.getElementById("sg").innerHTML =8;
 			s=1
 			break;
 		case "k4":
+			document.getElementById("parte").innerHTML="2 PARTE";
 			suma=12
 			document.getElementById("sg").innerHTML =12;
 			s=1
 			break;
 		}
+		//alert(a);
 		
 		var total = document.getElementById("valortot").innerHTML;
 		//alert(total);
@@ -1641,19 +1678,39 @@ function capdep(clicked_id)
 		} else{
 			var r =r.substring(0,4); 
 		}
+		if (x==1)
+		{
+			document.getElementById("botfin").innerHTML="INICIO"
+		}
+		
 			document.getElementById("valortot").innerHTML =r+" SEMANAS";	
-			if (r<=32)
+			if (r<33)
 			{	
+			var x=1
 				var boton=document.getElementById("botfin").text
 				document.getElementById("botfin").innerHTML="SEGUIR"
 				
 			}else{
+				
 				document.getElementById("botfin").innerHTML="REGRESAR"
 			}
 			
 			if (boton=="INICIO")
 			{
-				document.getElementById("botfin").innerHTML="REGRESAR"
+				document.getElementById("botfin").innerHTML="INICIO"
+			}
+			
+			
+			
+			if (r<37)
+			{
+				document.getElementById("capurroclasificacion").innerHTML="PREMATURO";
+			}else if (r<41)
+			{
+				document.getElementById("capurroclasificacion").innerHTML="TÉRMINO";
+			}else if(r>41)
+			{
+				document.getElementById("capurroclasificacion").innerHTML="POSTÉRMINO";
 			}
 	}
 		
