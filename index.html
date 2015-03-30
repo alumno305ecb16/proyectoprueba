@@ -26,7 +26,7 @@
       <div data-role="content" data-theme="a">
      	<ul data-role="listview">
         <li><a href="#pagparto" data-transition="slidedown">FECHA PROBABLE DE PARTO</a></li>
-        <li><a href="#pagcapurro" data-transition="slidedown">CAPURRO</a></li>
+        <li><a href="#pagdep" data-transition="slidedown">CAPURRO</a></li>
         <br>
         <li><a href="#pagacerca" data-transition="slidedown">ACERCA DE</a></li>
           
@@ -286,27 +286,7 @@
   </div>
   
   
-   <div data-role="page" id="pagcapurro" data-theme="a">
-	<div data-role="header" data-theme="a">
-    
-    		<h1>CAPURRO</h1>
-     </div>
-      <div data-role="content" data-theme="a">
-     	<ul data-role="listview">
-        <li><a href="#pagsano" data-transition="slidedown">CAPURRO SOMÁTICO</a></li>
-         <li><a href="#pagdep" data-transition="slidedown">CAPURRO NEUROLÓGICO</a></li><br>
-         </ul>
-         <br>
-        <center> <a href="#page"  class="proyecto" data-transition="slidedown">PRINCIPAL</a></center>
-        </div>
-        
-        <br><br>
-      <div data-role="footer" data-theme="a">
-   	<h4>AREA DE SALUD</h4>
-   </div>
-   
-     </div>
-  </center>
+  
   
   
 <script type="text/livescript">
@@ -393,6 +373,22 @@ function pab(clicked_id)
 		case "d5":
 			suma=20
 			s=1
+			break;
+		case "l1":
+			suma=0
+			s=0
+			break;
+		case "l2":
+			suma=5
+			s=0
+			break;
+		case "l3":
+			suma=10
+			s=0
+			break;
+		case "l4":
+			s=15
+			s=0
 			break;
 		}
 		
@@ -505,7 +501,7 @@ function pab(clicked_id)
      	<table border="2px"> 
            <tr>
            <td>
-   		<a href="#pagsano4"><input type="image" id="b1" onClick="pab(this.id)" src="jquery-mobile/images/glandula/palpable.jpg" align="left" width="100" height="100" value="0"></a>
+   		<a href="#pagsano3"><input type="image" id="b1" onClick="pab(this.id)" src="jquery-mobile/images/glandula/palpable.jpg" align="left" width="100" height="100" value="0"></a>
         	</td>
             <td>
         <p align="left">No palpable</p>
@@ -514,7 +510,7 @@ function pab(clicked_id)
             
             <tr>
             <td>
-        <a href="#pagsano4"><input type="image" id="b2" onClick="pab(this.id)" src="jquery-mobile/images/glandula/menor5.jpg"  align="left" width="100" height="100" value="5"></a>
+        <a href="#pagsano3"><input type="image" id="b2" onClick="pab(this.id)" src="jquery-mobile/images/glandula/menor5.jpg"  align="left" width="100" height="100" value="5"></a>
         	</td>
             <td bgcolor="#ACBFFF">
         <p align="left">Palpable menor de 5 mm.</p>
@@ -523,7 +519,7 @@ function pab(clicked_id)
             
         	<tr>
             <td>
-        <a href="#pagsano4"><input type="image" id="b3" onClick="pab(this.id)" src="jquery-mobile/images/glandula/entre5y10.jpg" align="left" width="100" height="100" value="10"></a>
+        <a href="#pagsano3"><input type="image" id="b3" onClick="pab(this.id)" src="jquery-mobile/images/glandula/entre5y10.jpg" align="left" width="100" height="100" value="10"></a>
         	</td>
             <td>
         <p align="left">Palpable entre 5 y 10 mm.</p>
@@ -532,7 +528,7 @@ function pab(clicked_id)
             
             <tr>
             <td>
-        <a href="#pagsano4"><input type="image" id="b4" onClick="pab(this.id)" src="jquery-mobile/images/glandula/mayor10.jpg"  align="left" width="100" height="100" value="15"></a>
+        <a href="#pagsano3"><input type="image" id="b4" onClick="pab(this.id)" src="jquery-mobile/images/glandula/mayor10.jpg"  align="left" width="100" height="100" value="15"></a>
         	</td>
             <td bgcolor="#ACBFFF">
         <p align="left">Palpable mayor a 10 mm.</p>
@@ -550,6 +546,78 @@ function pab(clicked_id)
      
 </center>     
 
+<!-- sano3 -->
+<div data-role="page" id="pagsano3" data-theme="a">
+	<div data-role="header" data-theme="a">
+        		<h1>FORMACIÓN DEL PEZÓN</h1>
+     </div>
+     
+
+     <div>
+    
+     	<table border="2px"> 
+        <tr>
+        <td>
+         <div align="center">  <a href="#pagsano2" class="botonhoja" onClick="reply_click(this.id)" id="atras3">ATRAS</a></div>
+        </td>
+        <td>
+       <div align="right"> <a href="#pagcapurro" class="botonhoja" onClick="r()">REGRESAR</a></div>
+        </td>
+        
+        </tr>
+        
+           <tr>
+           <td>
+   		<a href="#pagsano4"><input type="image" id="l1" onClick="pab(this.id)" src="jquery-mobile/images/pezon/apenavicible.jpg" align="left" width="100" height="100" value="0"></a>
+        	</td>
+            <td>
+        <p align="left">Apenas visible sin Areola</p>
+        	</td>
+            </tr>
+            
+            <tr>
+            <td>
+        <a href="#pagsano4"><input type="image" id="l2" onClick="pab(this.id)" src="jquery-mobile/images/pezon/diametro75lineachata.jpg"  align="left" width="100" height="100" value="5"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">Diametro menor de 7.5 mm Areola lisa y chata</p>
+        	</td>
+            
+            </tr>
+            
+        	<tr>
+            <td>
+        <a href="#pagsano4"><input type="image" id="l3" onClick="pab(this.id)" src="jquery-mobile/images/pezon/bordenolevantado.jpg" align="left" width="100" height="100" value="10"></a>
+        	</td>
+            <td>
+        <p align="left">Diametro mayor de 7.5 Areola punteada (Borde no elevado)</p>
+        	</td>
+           
+        	</tr>
+            
+            <tr>
+            <td>
+        <a href="#pagsano4"><input type="image" id="l4" onClick="pab(this.id)" src="jquery-mobile/images/pezon/bordelevantado.jpg"  align="left" width="100" height="100" value="15"></a>
+        	</td>
+            <td bgcolor="#ACBFFF">
+        <p align="left">Diametro mayor de 7.5 Areola punteada (Borde elevado)</p>
+     		</td>
+            </tr>
+       </table>
+     </div>
+     
+       
+       <h4><div align="center">SELECCIONADO</div></h4>
+        <h4><div id="f" align="center">0</div></h4>
+           
+ <center>   
+      <div data-role="footer" data-theme="a">
+   	<h4>AREA DE SALUD</h4>
+   </div>
+     </div>
+     
+</center>     
+<!-- sano4 -->
 
 
  <div data-role="page" id="pagsano4" data-add-back-btn="true" data-theme="a">
@@ -705,11 +773,39 @@ function pab(clicked_id)
 	</center>
 
 
-<script>
-function r()
+<script language="javascript">
+function r(paguina)
 {
+	bot=document.getElementById("botfin").text
+	//alert(bot);
+	if (bot=="SEGUIR")
+	{
+				
+				var a=document.getElementById("p").innerHTML;
+				var b=document.getElementById("t").innerHTML;
+				var c=document.getElementById("f").innerHTML;
+				var d=document.getElementById("tp").innerHTML;
+				var e=document.getElementById("pp").innerHTML;
+				
+				var suma=parseInt(a)+parseInt(b)+parseInt(c)+parseInt(d)+parseInt(e);
+				document.getElementById("valortot").innerHTML=suma;
+				
+		window.location=("#pagdep6");	
+				document.getElementById("botfin").innerHTML="INICIO";		
+	}else{
+	
+	window.location=('#page');
 	a=document.getElementById("valortotal").innerHTML =0;
 	a=document.getElementById("valortot").innerHTML =0;
+		document.getElementById("t").innerHTML=0;
+		document.getElementById("f").innerHTML=0;
+		document.getElementById("tp").innerHTML=0;
+		document.getElementById("sg").innerHTML=0;
+		document.getElementById("pp").innerHTML=0;
+		document.getElementById("sb").innerHTML=0;
+		document.getElementById("p").innerHTML=0;
+	}
+		
 }
 </script>
 
@@ -799,7 +895,7 @@ function r()
             <div align="center">  <a href="#pagdep" class="botonhoja" onClick="reply_click(this.id)" id="atras2">ATRAS</a></div>
            </td>
            <td>
-            <div align="right"><a href="#pagcapurro" class="botonhoja" onClick="r()">REGRESAR</a></div>
+            <div align="right"><a href="#page" class="botonhoja" onClick="r()">REGRESAR</a></div>
            </td>
            </tr>
            
@@ -871,7 +967,7 @@ function r()
          <div align="center">  <a href="#pagdep2" class="botonhoja" onClick="reply_click(this.id)" id="atras3">ATRAS</a></div>
         </td>
         <td>
-       <div align="right"> <a href="#pagcapurro" class="botonhoja" onClick="r()">REGRESAR</a></div>
+       <div align="right"> <a href="#page" class="botonhoja" onClick="r()">REGRESAR</a></div>
         </td>
         
         </tr>
@@ -944,7 +1040,7 @@ function r()
            <div align="center">  <a href="#pagdep3" class="botonhoja" onClick="reply_click(this.id)" id="atras4">ATRAS</a></div>
            </td>
            <td>
-            <div align="right"><a href="#pagcapurro" class="botonhoja" onClick="r()">REGRESAR</a></div>
+            <div align="right"><a href="#page" class="botonhoja" onClick="r()">REGRESAR</a></div>
            </td>
            </tr>
            <td>
@@ -1023,12 +1119,12 @@ function r()
        <div align="center">  <a href="#pagdep4" class="botonhoja" onClick="reply_click(this.id)" id="atras5">ATRAS</a></div>
        </td>
        <td>
-      <div align="right"> <a href="#pagcapurro" class="botonhoja" onClick="r()">REGRESAR</a></div>
+      <div align="right"> <a href="#page" class="botonhoja" onClick="r()">REGRESAR</a></div>
        </td>
        </tr>
            <tr>
            <td>
-   		<a href="#pagdep6"><input type="image" id="i1" onClick="capdep(this.id)" src="jquery-mobile/images/plantares/sinpliegues.jpg" align="left" width="100" height="100" value="0"></a>
+   		<a href="#pagresdep"><input type="image" id="i1" onClick="capdep(this.id)" src="jquery-mobile/images/plantares/sinpliegues.jpg" align="left" width="100" height="100" value="0"></a>
         	</td>
             <td>
         <p align="left">Sin pliegues</p>
@@ -1037,7 +1133,7 @@ function r()
             
             <tr>
             <td>
-        <a href="#pagdep6"><input type="image" id="i2" onClick="capdep(this.id)" src="jquery-mobile/images/plantares/marcasmaldefinidas.jpg" align="left" width="100" height="100" value="5"></a>
+        <a href="#pagresdep"><input type="image" id="i2" onClick="capdep(this.id)" src="jquery-mobile/images/plantares/marcasmaldefinidas.jpg" align="left" width="100" height="100" value="5"></a>
         	</td>
             <td bgcolor="#ACBFFF">
         <p align="left">Marcas mal definidas en la mitad anterior</p>
@@ -1046,7 +1142,7 @@ function r()
         
         	<tr>
             <td>
-        <a href="#pagdep6"><input type="image" id="i3" onClick="capdep(this.id)" src="jquery-mobile/images/plantares/marcasbiendefinidas.jpg" align="left" width="100" height="100" value="10"></a>
+        <a href="#pagresdep"><input type="image" id="i3" onClick="capdep(this.id)" src="jquery-mobile/images/plantares/marcasbiendefinidas.jpg" align="left" width="100" height="100" value="10"></a>
         	</td>
             <td>
         <p align="left">Marcas bien definidas en la 1/2 anterior, surcos en 1/2 anterior</p>
@@ -1056,7 +1152,7 @@ function r()
             
             <tr>
             <td>
-        <a href="#pagdep6"><input type="image" id="i4" onClick="capdep(this.id)" src="jquery-mobile/images/plantares/surcos.jpg" align="left" width="100" height="100" value="15"></a>
+        <a href="#pagresdep"><input type="image" id="i4" onClick="capdep(this.id)" src="jquery-mobile/images/plantares/surcos.jpg" align="left" width="100" height="100" value="15"></a>
         	</td>
             <td bgcolor="#ACBFFF">
         <p align="left">Surcos en la mitad anterior</p>
@@ -1065,7 +1161,7 @@ function r()
             
            	<tr>
             <td> 
-         <a href="#pagdep6"><input type="image" id="i5" onClick="capdep(this.id)" src="jquery-mobile/images/plantares/surcosenmas.jpg" align="left" width="100" height="100" value="20"></a>
+         <a href="#pagresdep"><input type="image" id="i5" onClick="capdep(this.id)" src="jquery-mobile/images/plantares/surcosenmas.jpg" align="left" width="100" height="100" value="20"></a>
          	</td>
             <td>
           <p align="left">Surcos en mas de la mitad anterior</p>
@@ -1098,10 +1194,7 @@ function r()
      	<table border="2px"> 
         <tr>
         <td>
-        <div align="center">  <a href="#pagdep5" class="botonhoja" onClick="reply_click(this.id)" id="atras6">ATRAS</a></div>
-        </td>
-        <td>
-        <div align="right"><a href="#pagcapurro" class="botonhoja" onClick="r()">REGRESAR</a></div>
+        <div align="right"><a href="#page" class="botonhoja" onClick="r()">REGRESAR</a></div>
         </td>
         </tr>
            <tr>
@@ -1172,7 +1265,7 @@ function r()
          <div align="center">  <a href="#pagdep6" class="botonhoja" onClick="reply_click(this.id)" id="atras7">ATRAS</a></div>
         </td>
         <td>
-        <div align="right"><a href="#pagcapurro" class="botonhoja" onClick="r()">REGRESAR</a></div>
+        <div align="right"><a href="#page" class="botonhoja" onClick="r()">REGRESAR</a></div>
         </td>
         </tr>
            <tr>
@@ -1243,7 +1336,7 @@ function r()
     
      <a href="#pagdep7" class="botonhoja" onClick="reply_click(this.id)" id="atras8">ATRAS</a>
      
-    <a href="#pagcapurro" class="botonhoja" onClick="r()">REGRESAR</a>
+    <a href="paguina.html" class="botonhoja" id="botfin" onClick="r(this.href);return false">REGRESAR</a>
       
     </center>
     
@@ -1264,6 +1357,9 @@ function reply_click(clicked_id)
     id=(clicked_id);
 		switch(id)
 		{
+			case "atras1":
+			 	document.getElementById("p").innerHTML=0;
+		//	alert(a);
 			case "atras8":
 		
 				var a=document.getElementById("p").innerHTML;
@@ -1285,8 +1381,8 @@ function reply_click(clicked_id)
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
 			//	alert(valor);
-		//		document.getElementById("p").innerHTML=0;
-				
+				document.getElementById("t").innerHTML=0;
+			//	alert(a);
 				break;
 			case "atras3":
 				var i = document.getElementById("t").innerHTML;
@@ -1294,7 +1390,8 @@ function reply_click(clicked_id)
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
 		//		alert(valor);
-				//document.getElementById("t").innerHTML=0;
+				document.getElementById("f").innerHTML=0;
+				//alert(a);
 				break;
 			case "atras4":
 				var i = document.getElementById("f").innerHTML;
@@ -1302,7 +1399,8 @@ function reply_click(clicked_id)
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
 			//	alert(valor);
-			//	document.getElementById("f").innerHTML=0;
+				document.getElementById("tp").innerHTML=0;
+			//	alert(a);
 				break;
 			case "atras5":
 				var i = document.getElementById("tp").innerHTML;
@@ -1310,7 +1408,8 @@ function reply_click(clicked_id)
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
 			//	alert(valor);
-			//	document.getElementById("tp").innerHTML=0;
+				document.getElementById("pp").innerHTML=0;
+				//alert(a);
 				break;
 			case "atras6":
 				var i = document.getElementById("pp").innerHTML;
@@ -1318,7 +1417,8 @@ function reply_click(clicked_id)
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
 			//	alert(valor);
-				//document.getElementById("pp").innerHTML=0;
+				document.getElementById("sb").innerHTML=0;
+			//	alert(a);
 				break;
 			case "atras7":
 				var i = document.getElementById("sb").innerHTML;
@@ -1326,8 +1426,10 @@ function reply_click(clicked_id)
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
 			//	alert(valor);
-			//	document.getElementById("sb").innerHTML=0;
+				document.getElementById("sg").innerHTML=0;
+				//alert(a);
 				break;
+				
 			
 		}
 }
@@ -1444,27 +1546,27 @@ function capdep(clicked_id)
 		case "i1":
 			suma=0
 			document.getElementById("pp").innerHTML =0;
-			s=0
+			s=1
 			break;
 		case "i2":
 			suma=5
 			document.getElementById("pp").innerHTML =5;
-			s=0
+			s=1
 			break;
 		case "i3":
 			suma=10
 			document.getElementById("pp").innerHTML =10;
-			s=0
+			s=1
 			break;
 		case "i4":
 			suma=15
 			document.getElementById("pp").innerHTML =15;
-			s=0
+			s=1
 			break;
 		case "i5":
 			suma=20
 			document.getElementById("pp").innerHTML =20;
-			s=0
+			s=1
 			break;
 		case "j1":
 			suma=0
@@ -1509,10 +1611,12 @@ function capdep(clicked_id)
 		}
 		
 		var total = document.getElementById("valortot").innerHTML;
-		
+		//alert(total);
 		total=(parseInt(total)+parseInt(suma));
 			
 		var a=document.getElementById("valortot").innerHTML =total;
+	//	alert(a);
+		
 		var b=parseInt(a);
 		
 		if (s==1)
@@ -1537,10 +1641,32 @@ function capdep(clicked_id)
 			var r =r.substring(0,4); 
 		}
 			document.getElementById("valortot").innerHTML =r+" SEMANAS";	
+			if (r<=32)
+			{	
+				var boton=document.getElementById("botfin").text
+				document.getElementById("botfin").innerHTML="SEGUIR"
+				
+			}else{
+				document.getElementById("botfin").innerHTML="REGRESAR"
+			}
+			
+			if (boton=="INICIO")
+			{
+				document.getElementById("botfin").innerHTML="REGRESAR"
+			}
 	}
+		
+		
+		//function check() {
+    //document.getElementById("red").checked = true;
+//}
+		
 		
 }
 </script>
+
+
+
 
 </body>
 </html>
