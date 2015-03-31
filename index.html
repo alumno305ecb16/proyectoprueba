@@ -281,7 +281,7 @@
 </form>
 
 <h><label> RESULTADO</label></h5>
-<h4><div id="res"></div></h4>
+<font color="#FFFFFF"><h4 style="background-color:#F00"><div id="res"></div></h4></font>
 
 </center>
 
@@ -1333,7 +1333,7 @@ function r(paguina)
     <div>
     <center>
     <br>
-      <div align="left" id="parte"></div>
+     <h4> <div align="center" id="parte"></div></h4>
       <br>
    <h3> <div id="valortot">0</div></h3>
     
@@ -1648,21 +1648,22 @@ function capdep(clicked_id)
 			s=1
 			break;
 		}
-		//alert(a);
 		
-		var total = document.getElementById("valortot").innerHTML;
-		//alert(total);
-		total=(parseInt(total)+parseInt(suma));
-			
-		var a=document.getElementById("valortot").innerHTML =total;
-	//	alert(a);
+				var aa=document.getElementById("p").innerHTML;
+				var bb=document.getElementById("t").innerHTML;
+				var cc=document.getElementById("f50").innerHTML;
+				var dd=document.getElementById("tp").innerHTML;
+				var ee=document.getElementById("pp").innerHTML;
+				var ff=document.getElementById("sb").innerHTML;
+				var gg= document.getElementById("sg").innerHTML;
 		
-		var b=parseInt(a);
+	
+		suma=parseInt(aa)+parseInt(bb)+parseInt(cc)+parseInt(dd)+parseInt(ee)+parseInt(ff)+parseInt(gg);
 		
 		if (s==1)
 	{
-		total = document.getElementById("valortot").innerHTML;
-		t=(parseInt(total)+204)
+		
+		t=(parseInt(suma)+204)
 		var r=t/7
 		
 		r=r.toString();
@@ -1704,16 +1705,23 @@ function capdep(clicked_id)
 				document.getElementById("botfin").innerHTML="REGRESAR"
 			}
 			
-			
-			if (r<37)
+			if(r<32)
 			{
-				document.getElementById("capurroclasificacion").innerHTML="PREMATURO";
-			}else if (r<41)
+				document.getElementById("capurroclasificacion").innerHTML="PREMATURO EXTREMO";
+			}
+			else if (r<=34)
+			{
+				document.getElementById("capurroclasificacion").innerHTML="PREMATURO MODERADO";
+			}
+			else if (r<=36)
+			{
+				document.getElementById("capurroclasificacion").innerHTML="PREMATURO LEVE";
+			}else if (r<42)
 			{
 				document.getElementById("capurroclasificacion").innerHTML="TÉRMINO";
-			}else if(r>41)
+			}else if(r>=42)
 			{
-				document.getElementById("capurroclasificacion").innerHTML="POSTÉRMINO";
+				document.getElementById("capurroclasificacion").innerHTML="POSTMADURO";
 			}
 	}
 		
