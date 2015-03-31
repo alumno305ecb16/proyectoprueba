@@ -13,7 +13,12 @@
        APLICACIÓN DE AREA DE SALUD
     </description>
 	
-	
+		<icon src="icono.png" gap:platform="android" gap:density="1dpi" />
+			<gap:splash src="icono.png" gap:platform="android" gap:density="1dpi" />
+			<gap:splash src="icono.png" gap:platform="android" gap:density="mdpi" />
+			<gap:splash src="icono.png" gap:platform="android" gap:density="hdpi" />
+			<gap:splash src="icono.png" gap:platform="android" gap:density="xhdpi" />
+			
 
     <preference name="phonegap-version" value="3.1.0" />
 	
