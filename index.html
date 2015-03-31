@@ -245,13 +245,18 @@
 		
 		if(i==273)
 			{
-				var fecha1=d+" / " + xmes + " / " + xy
+				var fecha1=d+" / " + xmes + " / " + xy;
 			}
 			
 		
 		if(i==287)
 			{
-				var fecha2=d+" / " + xmes + " / " + xy
+				var fecha2=d+" / " + xmes + " / " + xy;
+			}
+			
+		if(i==280)
+			{
+				var fecha=d+" / " + xmes + " / " + xy;
 			}
 		}
 		
@@ -260,8 +265,14 @@
 		alert("FECHA INVALIDA") 
 	
 			document.getElementById("res").innerHTML ="";
+			document.getElementById("pro").innerHTML="";
+			document.getElementById("opc").innerHTML="";
+			document.getElementById("res1").innerHTML="";
 		}else{
 			document.getElementById("res").innerHTML =fecha1+"  -  "+fecha2;
+			document.getElementById("res1").innerHTML=fecha;
+			document.getElementById("pro").innerHTML="PROBABLE";
+			document.getElementById("opc").innerHTML="OPCIONAL";
 		}						
 	}
     </script>
@@ -282,7 +293,11 @@
 <div id="operaciones"></div>
 </form>
 
-<h><label> RESULTADO</label></h5>
+<h><label id="pro"></label></h5>
+
+<h4 style="background-color:#FF0"><div id="res1"></div></h4>
+
+<h><label id="opc"></label></h5>
 <font color="#FFFFFF"><h4 style="background-color:#F00"><div id="res"></div></h4></font>
 
 </center>
@@ -1747,7 +1762,7 @@ function capdep(clicked_id)
 
 <!---------------------------------------SILVERMAN--------------------------------------------------------------------->
 		  
-<!---------------------------------------DISOCIACIÓN TORACOABDOMINAL--------------------------------------------------->                
+<!---------------------------------------DISOCIACIÓN TORACOABDOMINAL 1------------------------------------------------->                
         <div data-role="page" id="pagsildis" data-theme="a">
 	<div data-role="header" data-theme="a">
         		<p align="center">DISOCIACIÓN TORACOABDOMINAL</p>
@@ -1758,7 +1773,7 @@ function capdep(clicked_id)
     <table border="2px"> 
            <tr>
            <td>
-    		<a href="#pagsilret"><input type="image" id="dissin0" onClick="pab(this.id)" src="jquery-mobile/images/chest/chest0.jpg" align="left" width="140" height="80" value="0"></a>
+    		<a href="#pagsilret"><input type="image" id="dissin0" onClick="sumapuntossilverman(this.id)" src="jquery-mobile/images/chest/chest0.jpg" align="left" width="140" height="80" value="0"></a>
     		</td>
             <td>
             <p>Sincronizado</p>
@@ -1767,7 +1782,7 @@ function capdep(clicked_id)
             
             <tr>
             <td>
-            <a href="#pagsilret"><input type="image" id="disins1" onClick="pab(this.id)" src="jquery-mobile/images/chest/lag1.jpg" align="left" width="140" height="80" value="0"></a>
+            <a href="#pagsilret"><input type="image" id="disins1" onClick="sumapuntossilverman(this.id)" src="jquery-mobile/images/chest/lag1.jpg" align="left" width="140" height="80" value="0"></a>
             </td>
             <td>
             <p>En Inspiración</p>
@@ -1776,7 +1791,7 @@ function capdep(clicked_id)
             
             <tr>
             <td>
-             <a href="#pagsilret"><input type="image" id="dissie" onClick="pab(this.id)" src="jquery-mobile/images/chest/lag1.jpg" align="left" width="140" height="80" value="0"></a>
+             <a href="#pagsilret"><input type="image" id="dissie" onClick="sumapuntossilverman(this.id)" src="jquery-mobile/images/chest/lag1.jpg" align="left" width="140" height="80" value="0"></a>
             </td>
             <td>
             <p>Siempre visible</p>
@@ -1793,7 +1808,7 @@ function capdep(clicked_id)
 	   </div>
      </div>
 		
-<!-------------------------------------------RETRACCIONES INTERCOSTALES------------------------------------------------>
+<!-------------------------------------------RETRACCIONES INTERCOSTALES 2---------------------------------------------->
         
         <div data-role="page" id="pagsilret" data-theme="a">
 	<div data-role="header" data-theme="a">
@@ -1803,7 +1818,7 @@ function capdep(clicked_id)
      <table border="2px"> 
            <tr>
            <td>
-           		 <a href="#pagsilretrea"><input type="image" id="retsin" onClick="pab(this.id)" src="jquery-mobile/images/retracciones/sin0.jpg" align="left" width="140" height="80" value="0"></a>
+           		 <a href="#pagsilretrea"><input type="image" id="retsin" onClick="sumapuntossilverman(this.id)" src="jquery-mobile/images/retracciones/sin0.jpg" align="left" width="140" height="80" value="0"></a>
            </td>
            <td>
            <p>Sin Retracción</p>
@@ -1812,7 +1827,7 @@ function capdep(clicked_id)
            
            <tr>
            <td>
-           		<a href="#pagsilretrea"><input type="image" id="retsolo" onClick="pab(this.id)" src="jquery-mobile/images/retracciones/solo1.jpg" align="left" width="140" height="80" value="0"></a>
+           		<a href="#pagsilretrea"><input type="image" id="retsolo" onClick="sumapuntossilverman(this.id))" src="jquery-mobile/images/retracciones/solo1.jpg" align="left" width="140" height="80" value="0"></a>
            </td>
            <td>
            <p>Solo Visible</p>
@@ -1821,7 +1836,7 @@ function capdep(clicked_id)
      		
             <tr>
             <td>
-            	<a href="#pagsilretrea"><input type="image" id="retmar" onClick="pab(this.id)" src="jquery-mobile/images/retracciones/mar2.jpg" align="left" width="140" height="80" value="0"></a>
+            	<a href="#pagsilretrea"><input type="image" id="retmar" onClick="sumapuntossilverman(this.id)" src="jquery-mobile/images/retracciones/mar2.jpg" align="left" width="140" height="80" value="0"></a>
             </td>
             <td>
             <p>Marcado</p>
@@ -1838,7 +1853,7 @@ function capdep(clicked_id)
    			<h4 align="center">AREA DE SALUD</h4>
 	   </div>
        </div>
-<!---------------------------------------------RETRACCION SUBXIFOLDES-------------------------------------------------->        
+<!---------------------------------------------RETRACCION SUBXIFOLDES 3----------------------------------------------->        
 							<div data-role="page" id="pagsilretrea" data-theme="a">
 							<div data-role="header" data-theme="a">
         					<p align="center">RETRACCIÓN SUBXIFOLDES</p>
@@ -1847,7 +1862,7 @@ function capdep(clicked_id)
      	<table border="2px"> 
            <tr>
            <td>
-           		 <a href="#pagsilale"><input type="image" id="retsin" onClick="pab(this.id)" src="jquery-mobile/images/RETRACCION/ninguno0.jpg" align="left" width="140" height="80" value="0"></a>
+           		 <a href="#pagsilale"><input type="image" id="retsin" onClick="sumapuntossilverman(this.id)" src="jquery-mobile/images/RETRACCION/ninguno0.jpg" align="left" width="140" height="80" value="0"></a>
             </td>
             <td>
             <p>Ninguno</p>
@@ -1856,7 +1871,7 @@ function capdep(clicked_id)
             
             <tr>
             <td>
-            	<a href="#pagsilale"><input type="image" id="retsin" onClick="pab(this.id)" src="jquery-mobile/images/RETRACCION/solo1.jpg" align="left" width="140" height="80" value="0"></a>
+            	<a href="#pagsilale"><input type="image" id="retsin" onClick="sumapuntossilverman(this.id)" src="jquery-mobile/images/RETRACCION/solo1.jpg" align="left" width="140" height="80" value="0"></a>
             </td>
             <td>
             <p>Solo Visible</p>
@@ -1865,7 +1880,7 @@ function capdep(clicked_id)
             
             <tr>
             <td>
-            <a href="#pagsilale"><input type="image" id="retsin" onClick="pab(this.id)" src="jquery-mobile/images/RETRACCION/marcado2.jpg" align="left" width="140" height="80" value="0"></a>
+            <a href="#pagsilale"><input type="image" id="retsin" onClick="sumapuntossilverman(this.id)" src="jquery-mobile/images/RETRACCION/marcado2.jpg" align="left" width="140" height="80" value="0"></a>
             </td>
             <td>
             <p>Marcado</p>
@@ -1881,7 +1896,7 @@ function capdep(clicked_id)
    			<h4 align="center">AREA DE SALUD</h4>
 	   </div>
      </div>	
-<!---------------------------------------------ALETEO NASAL------------------------------------------------------------>
+<!---------------------------------------------ALETEO NASAL 4--------------------------------------------------------->
 
 		<div data-role="page" id="pagsilale" data-theme="a">
 							<div data-role="header" data-theme="a">
@@ -1893,7 +1908,7 @@ function capdep(clicked_id)
                 <table border="2px"> 
            <tr>
            <td>
-           		 <a href="#pagsilquejido"><input type="image" id="alenin" onClick="pab(this.id)" src="jquery-mobile/images/aleteo/ninguno0.jpg" align="left" width="140" height="80" value="0"></a>
+           		 <a href="#pagsilquejido"><input type="image" id="alenin" onClick="sumapuntossilverman(this.id)" src="jquery-mobile/images/aleteo/ninguno0.jpg" align="left" width="140" height="80" value="0"></a>
             </td>
             <td>
             <p>Ninguno</p>
@@ -1902,7 +1917,7 @@ function capdep(clicked_id)
             
             <tr>
             <td>
-            	<a href="#pagsilquejido"><input type="image" id="alemin" onClick="pab(this.id)" src="jquery-mobile/images/aleteo/minimo1.jpg" align="left" width="140" height="80" value="0"></a>
+            	<a href="#pagsilquejido"><input type="image" id="alemin" onClick="sumapuntossilverman(this.id)" src="jquery-mobile/images/aleteo/minimo1.jpg" align="left" width="140" height="80" value="0"></a>
             </td>
             <td>
             <p>Minimo</p>
@@ -1911,7 +1926,7 @@ function capdep(clicked_id)
             
             <tr>
             <td>
-            	<a href="#pagsilquejido"><input type="image" id="alemar" onClick="pab(this.id)" src="jquery-mobile/images/aleteo/marcado2.jpg" align="left" width="140" height="80" value="0"></a>
+            	<a href="#pagsilquejido"><input type="image" id="alemar" onClick="sumapuntossilverman(this.id)" src="jquery-mobile/images/aleteo/marcado2.jpg" align="left" width="140" height="80" value="0"></a>
             </td>
             <td>
             <p>Marcado</p>
@@ -1929,7 +1944,9 @@ function capdep(clicked_id)
      </div>
      </div>
 
-<!------------------------------------------QUEJIDO NASAL---------------------------------------------------------->
+<!------------------------------------------QUEJIDO NASAL 5------------------------------------------------------->
+
+
 	<div data-role="page" id="pagsilquejido" data-theme="a">
 							<div data-role="header" data-theme="a">
         			<p align="center">QUEJIDO NASAL</p>
@@ -1939,7 +1956,7 @@ function capdep(clicked_id)
                 <table border="2px"> 
            <tr>
            <td>
-           			     <a href="#pagsilquejido"><input type="image" id="quenin" onClick="pab(this.id)" src="jquery-mobile/images/quejido/ninguno0.jpg" align="left" width="140" height="80" value="0"></a>
+          		<a href="#pagsilquejido"><input type="image" id="quenin" onClick="sumapuntossilverman(this.id)" src="jquery-mobile/images/quejido/ninguno0.jpg" align="left" width="140" height="80" value="0"></a>
            </td>
            <td>
            <p>Ninguno</p>
@@ -1948,7 +1965,7 @@ function capdep(clicked_id)
             
             <tr>
             <td>
-            	 <a href="#pagsilquejido"><input type="image" id="quesolo" onClick="pab(this.id)" src="jquery-mobile/images/quejido/solo1.jpg" align="left" width="140" height="80" value="0"></a>
+            	 <a href="#pagsilquejido"><input type="image" id="quesolo" onClick="sumapuntossilverman(this.id)" src="jquery-mobile/images/quejido/solo1.jpg" align="left" width="140" height="80" value="0"></a>
             </td>
             <td>
             <p>Solo por esteloscop</p>
@@ -1957,7 +1974,7 @@ function capdep(clicked_id)
             
             <tr>
             <td>
-            	 <a href="#pagsilquejido"><input type="image" id="quesolo" onClick="pab(this.id)" src="jquery-mobile/images/quejido/audible2.jpg" align="left" width="140" height="80" value="0"></a>
+            	 <a href="#pagsilquejido"><input type="image" id="quesolo" onClick="sumapuntossilverman(this.id)" src="jquery-mobile/images/quejido/audible2.jpg" align="left" width="140" height="80" value="0"></a>
                  
             </td>
             <td>
@@ -1976,6 +1993,15 @@ function capdep(clicked_id)
          </div>       
          </div>
                 
+<!-----------------------------------SUMA JAVASCRIPT------------------------------------------------------------------>
+<script type="text/livescript">
+function sumapuntossilverman(clicked_id)
+
+{
+	var s=(clicked_id);
+	
+}
+</script>
 
 
 </body>
