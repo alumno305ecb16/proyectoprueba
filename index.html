@@ -27,6 +27,8 @@
      	<ul data-role="listview">
         <li><a href="#pagparto" data-transition="slidedown">FECHA PROBABLE DE PARTO</a></li>
         <li><a href="#pagdep" data-transition="slidedown">CAPURRO</a></li>
+         <li><a href="#pagsildis" data-transition="slidedown">SILVERMAN</a></li>
+        
         <br>
         <li><a href="#pagacerca" data-transition="slidedown">ACERCA DE</a></li>
           
@@ -1334,8 +1336,8 @@ function r(paguina)
     <center>
     <br>
      <h4> <div align="center" id="parte"></div></h4>
-      <br>
-   <h3> <div id="valortot">0</div></h3>
+      
+   	<font color="#000000"><h3 style="background-color:#FF0"> <div id="valortot">0</div></h3></font>
     
      <a href="#paguina.html" class="botonhoja" onClick="reply_click(this.id)" id="atras8">ATRAS</a>
      
@@ -1685,8 +1687,24 @@ function capdep(clicked_id)
 		{
 			document.getElementById("botfin").innerHTML="INICIO"
 		}
-		
-			document.getElementById("valortot").innerHTML =r+" SEMANAS";	
+			
+			r=r.toString();
+			var dd=r.charAt(3)
+			var mm =r.substring(0,2);
+			
+			if (dd=="")
+			{
+				dd=0	
+			}
+			if (dd==1)
+			{
+				document.getElementById("valortot").innerHTML =mm+" SEMANAS Y "+dd+" DIA";	
+			}else{
+				document.getElementById("valortot").innerHTML =mm+" SEMANAS Y "+dd+" DIAS";
+			}
+			
+			
+			
 			if (r<33)
 			{	
 			var x=1
@@ -1722,19 +1740,242 @@ function capdep(clicked_id)
 			}else if(r>=42)
 			{
 				document.getElementById("capurroclasificacion").innerHTML="POSTMADURO";
-			}
-	}
-		
-		
-		//function check() {
-    //document.getElementById("red").checked = true;
-//}
-		
-		
+			}		
+	}	
 }
 </script>
 
+<!---------------------------------------SILVERMAN--------------------------------------------------------------------->
+		  
+<!---------------------------------------DISOCIACIÓN TORACOABDOMINAL--------------------------------------------------->                
+        <div data-role="page" id="pagsildis" data-theme="a">
+	<div data-role="header" data-theme="a">
+        		<p align="center">DISOCIACIÓN TORACOABDOMINAL</p>
+     </div>
+     
+    <div>
+    
+    <table border="2px"> 
+           <tr>
+           <td>
+    		<a href="#pagsilret"><input type="image" id="dissin0" onClick="pab(this.id)" src="jquery-mobile/images/chest/chest0.jpg" align="left" width="140" height="80" value="0"></a>
+    		</td>
+            <td>
+            <p>Sincronizado</p>
+            </td>
+            </tr>
+            
+            <tr>
+            <td>
+            <a href="#pagsilret"><input type="image" id="disins1" onClick="pab(this.id)" src="jquery-mobile/images/chest/lag1.jpg" align="left" width="140" height="80" value="0"></a>
+            </td>
+            <td>
+            <p>En Inspiración</p>
+            </td>
+            </tr>
+            
+            <tr>
+            <td>
+             <a href="#pagsilret"><input type="image" id="dissie" onClick="pab(this.id)" src="jquery-mobile/images/chest/lag1.jpg" align="left" width="140" height="80" value="0"></a>
+            </td>
+            <td>
+            <p>Siempre visible</p>
+            </td>
+            </tr>
+    </table>
+    </div>
+    
+    <h4><div align="center">SELECCIONADO</div></h4>
+        <h4><div id="dtora" align="center">0</div></h4>
+    
+    <div data-role="footer" data-theme="a">
+   			<h4 align="center">AREA DE SALUD</h4>
+	   </div>
+     </div>
+		
+<!-------------------------------------------RETRACCIONES INTERCOSTALES------------------------------------------------>
+        
+        <div data-role="page" id="pagsilret" data-theme="a">
+	<div data-role="header" data-theme="a">
+        		<p align="center">RETRACCIONES INTERCOSTALES</p>
+     </div>
+     <div>
+     <table border="2px"> 
+           <tr>
+           <td>
+           		 <a href="#pagsilretrea"><input type="image" id="retsin" onClick="pab(this.id)" src="jquery-mobile/images/retracciones/sin0.jpg" align="left" width="140" height="80" value="0"></a>
+           </td>
+           <td>
+           <p>Sin Retracción</p>
+           </td>
+           </tr>
+           
+           <tr>
+           <td>
+           		<a href="#pagsilretrea"><input type="image" id="retsolo" onClick="pab(this.id)" src="jquery-mobile/images/retracciones/solo1.jpg" align="left" width="140" height="80" value="0"></a>
+           </td>
+           <td>
+           <p>Solo Visible</p>
+           </td>
+           </tr>
+     		
+            <tr>
+            <td>
+            	<a href="#pagsilretrea"><input type="image" id="retmar" onClick="pab(this.id)" src="jquery-mobile/images/retracciones/mar2.jpg" align="left" width="140" height="80" value="0"></a>
+            </td>
+            <td>
+            <p>Marcado</p>
+            </td>
+            </tr>   
+        </table>
+        
+           </div>
+           
+           <h4><div align="center">SELECCIONADO</div></h4>
+        <h4><div id="rint" align="center">0</div></h4>
+        
+            <div data-role="footer" data-theme="a">
+   			<h4 align="center">AREA DE SALUD</h4>
+	   </div>
+       </div>
+<!---------------------------------------------RETRACCION SUBXIFOLDES-------------------------------------------------->        
+							<div data-role="page" id="pagsilretrea" data-theme="a">
+							<div data-role="header" data-theme="a">
+        					<p align="center">RETRACCIÓN SUBXIFOLDES</p>
+     </div>
+     	<div>
+     	<table border="2px"> 
+           <tr>
+           <td>
+           		 <a href="#pagsilale"><input type="image" id="retsin" onClick="pab(this.id)" src="jquery-mobile/images/RETRACCION/ninguno0.jpg" align="left" width="140" height="80" value="0"></a>
+            </td>
+            <td>
+            <p>Ninguno</p>
+            </td>
+            </tr>
+            
+            <tr>
+            <td>
+            	<a href="#pagsilale"><input type="image" id="retsin" onClick="pab(this.id)" src="jquery-mobile/images/RETRACCION/solo1.jpg" align="left" width="140" height="80" value="0"></a>
+            </td>
+            <td>
+            <p>Solo Visible</p>
+            </td>
+            </tr>
+            
+            <tr>
+            <td>
+            <a href="#pagsilale"><input type="image" id="retsin" onClick="pab(this.id)" src="jquery-mobile/images/RETRACCION/marcado2.jpg" align="left" width="140" height="80" value="0"></a>
+            </td>
+            <td>
+            <p>Marcado</p>
+            </td>
+            </tr>
+            </table>
+           </div>
+           
+           <h4><div align="center">SELECCIONADO</div></h4>
+        <h4><div id="rsub" align="center">0</div></h4>
+        
+            <div data-role="footer" data-theme="a">
+   			<h4 align="center">AREA DE SALUD</h4>
+	   </div>
+     </div>	
+<!---------------------------------------------ALETEO NASAL------------------------------------------------------------>
 
+		<div data-role="page" id="pagsilale" data-theme="a">
+							<div data-role="header" data-theme="a">
+        			<p align="center">ALETEO NASAL</p>
+ 
+     			</div>
+                <div>
+                
+                <table border="2px"> 
+           <tr>
+           <td>
+           		 <a href="#pagsilquejido"><input type="image" id="alenin" onClick="pab(this.id)" src="jquery-mobile/images/aleteo/ninguno0.jpg" align="left" width="140" height="80" value="0"></a>
+            </td>
+            <td>
+            <p>Ninguno</p>
+            </td>
+            </tr>
+            
+            <tr>
+            <td>
+            	<a href="#pagsilquejido"><input type="image" id="alemin" onClick="pab(this.id)" src="jquery-mobile/images/aleteo/minimo1.jpg" align="left" width="140" height="80" value="0"></a>
+            </td>
+            <td>
+            <p>Minimo</p>
+            </td>
+            </tr>
+            
+            <tr>
+            <td>
+            	<a href="#pagsilquejido"><input type="image" id="alemar" onClick="pab(this.id)" src="jquery-mobile/images/aleteo/marcado2.jpg" align="left" width="140" height="80" value="0"></a>
+            </td>
+            <td>
+            <p>Marcado</p>
+            </td>
+            </tr>
+            
+            </table>    
+          </div>
+                
+                 <h4><div align="center">SELECCIONADO</div></h4>
+        <h4><div id="anas" align="center">0</div></h4>
+        
+            <div data-role="footer" data-theme="a">
+   			<h4 align="center">AREA DE SALUD</h4>
+     </div>
+     </div>
+
+<!------------------------------------------QUEJIDO NASAL---------------------------------------------------------->
+	<div data-role="page" id="pagsilquejido" data-theme="a">
+							<div data-role="header" data-theme="a">
+        			<p align="center">QUEJIDO NASAL</p>
+ 
+     			</div>
+                <div>
+                <table border="2px"> 
+           <tr>
+           <td>
+           			     <a href="#pagsilquejido"><input type="image" id="quenin" onClick="pab(this.id)" src="jquery-mobile/images/quejido/ninguno0.jpg" align="left" width="140" height="80" value="0"></a>
+           </td>
+           <td>
+           <p>Ninguno</p>
+           </td>
+         	</tr>
+            
+            <tr>
+            <td>
+            	 <a href="#pagsilquejido"><input type="image" id="quesolo" onClick="pab(this.id)" src="jquery-mobile/images/quejido/solo1.jpg" align="left" width="140" height="80" value="0"></a>
+            </td>
+            <td>
+            <p>Solo por esteloscop</p>
+            </td>
+            </tr>
+            
+            <tr>
+            <td>
+            	 <a href="#pagsilquejido"><input type="image" id="quesolo" onClick="pab(this.id)" src="jquery-mobile/images/quejido/audible2.jpg" align="left" width="140" height="80" value="0"></a>
+                 
+            </td>
+            <td>
+            <p>Audible al oido</p>
+            </td>
+            </tr>
+            </table>              
+                         
+                </div>
+                 <h4><div align="center">SELECCIONADO</div></h4>
+        <h4><div id="anas" align="center">0</div></h4>
+        
+            <div data-role="footer" data-theme="a">
+   			<h4 align="center">AREA DE SALUD</h4>
+        
+         </div>       
+         </div>
+                
 
 
 </body>
