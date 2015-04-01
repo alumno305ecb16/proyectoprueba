@@ -25,9 +25,9 @@
      </div>
       <div data-role="content" data-theme="a">
      	<ul data-role="listview">
-        <li><a href="#pagparto" data-transition="slidedown">FECHA PROBABLE DE PARTO</a></li>
-        <li><a href="#pagdep" data-transition="slidedown">CAPURRO</a></li>
-         <li><a href="#pagsildis" data-transition="slidedown">SILVERMAN</a></li>
+        <li><a href="#pagparto" data-transition="slidedown" onClick="limpiarfecha()">FECHA PROBABLE DE PARTO</a></li>
+        <li><a href="#pagdep" data-transition="slidedown" onClick="limpiarcapurro()">CAPURRO</a></li>
+         <li><a href="#pagsildis" data-transition="slidedown" onClick="limpiarsilverman()">SILVERMAN</a></li>
         
         <br>
         <li><a href="#pagacerca" data-transition="slidedown">ACERCA DE</a></li>
@@ -277,6 +277,15 @@
 	}
     </script>
        
+    <script>
+	function limpiarfecha()
+	{
+			document.getElementById("res").innerHTML ="";
+			document.getElementById("pro").innerHTML="";
+			document.getElementById("opc").innerHTML="";
+			document.getElementById("res1").innerHTML="";
+	}
+	</script>
                    
 <center>
 <form>
@@ -818,8 +827,25 @@ function r(paguina)
 	}else{
 	
 	window.location=('#page');
-	a=document.getElementById("valortotal").innerHTML =0;
-	a=document.getElementById("valortot").innerHTML =0;
+//	a=document.getElementById("valortotal").innerHTML =0;
+//	a=document.getElementById("valortot").innerHTML =0;
+//		document.getElementById("t").innerHTML=0;
+//		document.getElementById("f50").innerHTML=0;
+//		document.getElementById("tp").innerHTML=0;
+//		document.getElementById("sg").innerHTML=0;
+//		document.getElementById("pp").innerHTML=0;
+//		document.getElementById("sb").innerHTML=0;
+//		document.getElementById("p").innerHTML=0;
+//		document.getElementById("parte").innerHTML="";
+	}
+		
+}
+</script>
+<script>
+function limpiarcapurro()
+{
+		a=document.getElementById("valortotal").innerHTML =0;
+		a=document.getElementById("valortot").innerHTML =0;
 		document.getElementById("t").innerHTML=0;
 		document.getElementById("f50").innerHTML=0;
 		document.getElementById("tp").innerHTML=0;
@@ -828,11 +854,8 @@ function r(paguina)
 		document.getElementById("sb").innerHTML=0;
 		document.getElementById("p").innerHTML=0;
 		document.getElementById("parte").innerHTML="";
-	}
-		
 }
 </script>
-
 
 		<!-- DEPRIMIDO-->
 
@@ -1357,6 +1380,7 @@ function r(paguina)
      <a href="#paguina.html" class="botonhoja" onClick="reply_click(this.id)" id="atras8">ATRAS</a>
      
     <a href="paguina.html" class="botonhoja" id="botfin" onClick="r(this.href);return false">REGRESAR</a>
+    
     <br>
     <font color="#FFFFFF"><h3 align="center" id="capurroclasificacion" style="background-color:#F00"> </h3></font>
     
@@ -2135,6 +2159,18 @@ function sumapuntossilverman(clicked_id)
 }
 </script>
 
+<script>
+function limpiarsilverman()
+{
+		document.getElementById("dtora").innerHTML="";
+		document.getElementById("rint").innerHTML="";
+		document.getElementById("rsub").innerHTML="";
+		document.getElementById("anas").innerHTML="";
+		document.getElementById("qnas").innerHTML="";
+		document.getElementById("silrango").innerHTML="";
+		document.getElementById("silpuntos").innerHTML="";
+}
+</script>
 
 </body>
 </html>
