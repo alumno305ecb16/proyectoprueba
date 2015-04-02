@@ -17,7 +17,7 @@
 
 <body>
 
-
+<!----------------------------------------PAGUINA PRINCIPAL-------------------------------------------------------->
 
 <div data-role="page" id="page" data-theme="a">
 	<div data-role="header" data-theme="a">
@@ -39,6 +39,7 @@
    </div>
   		</div>
 
+<!------------------------------------------------FECHA DE PROBABLE PARTO------------------------------------------->
 <div data-role="page" id="pagparto" data-theme="a">
 	<div data-role="header" data-theme="a">
    
@@ -53,7 +54,7 @@
      <center>
      <h3>FECHA DE LA ULTIMA MENSTRUACION (FUM)</h3>
       
-     
+ <!-------------------------------------------DIA--------------------------------------------------------------->
      <form name="dd">
        <SELECT NAME="dd" id="dd" class="form_select"> 
            <p>
@@ -93,6 +94,7 @@
               
        </form>
        
+  <!-------------------------------------------MES------------------------------------------------------------>     
        <form name="mm">
        <SELECT NAME="mm" id="mm" class="form_select"> 
            <p>
@@ -112,6 +114,7 @@
          </SELECT>
        </form>
           
+ <!-----------------------------------------------AÑO---------------------------------------------------------->         
       <form name="mm">
        <SELECT NAME="yyyy" id="yyyy" class="form_select"> 
            <p>
@@ -129,6 +132,8 @@
      </center>
      
     </div>
+
+<!----------------------------------SCRIPT CALCULO DE FECHA----------------------------------------------------->
               
     <script>
 	function operaciones()
@@ -277,6 +282,8 @@
 	}
     </script>
        
+ <!------------------------------------LIMPIAR FECHA----------------------------------------------------->      
+       
     <script>
 	function limpiarfecha()
 	{
@@ -286,7 +293,8 @@
 			document.getElementById("res1").innerHTML="";
 	}
 	</script>
-                   
+      
+ <!--------------------------------------------REESULTADO FECHA------------------------------------------>                  
 <center>
 <form>
 <br>
@@ -319,7 +327,7 @@
   
   
   
-  
+  <!---------------------------------SCRIPT NO FUNCIONA----------------------------------------------------->
   
 <script type="text/livescript">
 function pab(clicked_id)
@@ -461,7 +469,7 @@ function pab(clicked_id)
 				
 }
 </script>  
-
+<!------------------------------CAPURRO NO FUNCIONA----------------------------------------------------------->
 	<div data-role="page" id="pagsano" data-add-back-btn="true" data-theme="a">
 	<div data-role="header" data-theme="a">
         		<h1>FORMA DE LA OREJA(PABELLÓN)</h1>
@@ -803,7 +811,7 @@ function pab(clicked_id)
 	   </div>
  </div>
 	</center>
-
+<!--------------------------------------BOTON REGRESAR--------------------------------------------------->
 
 <script language="javascript">
 function r(paguina)
@@ -840,7 +848,7 @@ function confirmar()
 	var confirmar=confirm("¿DESEAS REGRESAR AL INICIO?")
 	if(confirmar)
 	{
-		alert("SI");
+//		alert("SI");
 	window.location=('#page');	
 	}
 }
@@ -849,15 +857,15 @@ function confirmar()
 <script>
 function limpiarcapurro()
 {
-		a=document.getElementById("valortotal").innerHTML =0;
-		a=document.getElementById("valortot").innerHTML =0;
-		document.getElementById("t").innerHTML=0;
-		document.getElementById("f50").innerHTML=0;
-		document.getElementById("tp").innerHTML=0;
-		document.getElementById("sg").innerHTML=0;
-		document.getElementById("pp").innerHTML=0;
-		document.getElementById("sb").innerHTML=0;
-		document.getElementById("p").innerHTML=0;
+		a=document.getElementById("valortotal").innerHTML ="";
+		a=document.getElementById("valortot").innerHTML ="";
+		document.getElementById("t").innerHTML="";
+		document.getElementById("f50").innerHTML="";
+		document.getElementById("tp").innerHTML="";
+		document.getElementById("sg").innerHTML="";
+		document.getElementById("pp").innerHTML="";
+		document.getElementById("sb").innerHTML="";
+		document.getElementById("p").innerHTML="";
 		document.getElementById("parte").innerHTML="";
 }
 </script>
@@ -931,7 +939,7 @@ function limpiarcapurro()
      
 </center>
 
-<!-----------------------------------------------TAMAÑO DE GLANDULA ------------------------------------------------>
+<!-----------------------------------------------TAMAÑO DE GLANDULA 2 ------------------------------------------------>
 
  <div data-role="page" id="pagdep2" data-theme="a">
 	<div data-role="header" data-theme="a">
@@ -1411,7 +1419,7 @@ function reply_click(clicked_id)
 		switch(id)
 		{
 			case "atras1":
-			 	document.getElementById("p").innerHTML=0;
+			 	document.getElementById("p").innerHTML="";
 		//	alert(a);
 			case "atras8":
 			boton=document.getElementById("botfin").text;
@@ -1455,7 +1463,7 @@ function reply_click(clicked_id)
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
 			//	alert(valor);
-				document.getElementById("t").innerHTML=0;
+				document.getElementById("t").innerHTML="";
 			//	alert(a);
 				break;
 			case "atras3":
@@ -1464,7 +1472,7 @@ function reply_click(clicked_id)
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
 		//		alert(valor);
-				document.getElementById("f50").innerHTML=0;
+				document.getElementById("f50").innerHTML="";
 				//alert(a);
 				break;
 			case "atras4":
@@ -1473,7 +1481,7 @@ function reply_click(clicked_id)
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
 			//	alert(valor);
-				document.getElementById("tp").innerHTML=0;
+				document.getElementById("tp").innerHTML="";
 			//	alert(a);
 				break;
 			case "atras5":
@@ -1482,7 +1490,7 @@ function reply_click(clicked_id)
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
 			//	alert(valor);
-				document.getElementById("pp").innerHTML=0;
+				document.getElementById("pp").innerHTML="";
 				//alert(a);
 				break;
 			case "atras6":
@@ -1491,7 +1499,7 @@ function reply_click(clicked_id)
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
 			//	alert(valor);
-				document.getElementById("sb").innerHTML=0;
+				document.getElementById("sb").innerHTML="";
 			//	alert(a);
 				break;
 			case "atras7":
@@ -1500,7 +1508,7 @@ function reply_click(clicked_id)
 				valor=(parseInt(tot)-parseInt(i));
 				document.getElementById("valortot").innerHTML =valor;
 			//	alert(valor);
-				document.getElementById("sg").innerHTML=0;
+				document.getElementById("sg").innerHTML="";
 				//alert(a);
 				break;
 				
@@ -1703,6 +1711,41 @@ function capdep(clicked_id)
 				var ff=document.getElementById("sb").innerHTML;
 				var gg= document.getElementById("sg").innerHTML;
 		
+				if (aa=="")
+				{
+					aa=0
+				}
+				
+				if (bb=="")
+				{
+					bb=0	
+				}
+				
+				if (cc=="")
+				{
+					cc=0
+				}	
+				
+				if (dd=="")
+				{
+					dd=0	
+				}
+				
+				if (ee=="")
+				{
+					ee=0	
+				}
+				
+				if (ff=="")
+				{
+					ff=0	
+				}
+				
+				if (gg=="")
+				{
+					gg=0	
+				}
+	
 	
 		suma=parseInt(aa)+parseInt(bb)+parseInt(cc)+parseInt(dd)+parseInt(ee)+parseInt(ff)+parseInt(gg);
 		
@@ -1721,10 +1764,16 @@ function capdep(clicked_id)
 		
 			var cad=parseInt(cadena);
 			
-		if (cad>=7)
+		if (cad==7)
 		{
+			var mod=0
 			r=parseInt(r)+1
-		} else{
+		} else if(cad==8)
+		{
+			r=parseInt(r)+1	
+			var mod=1
+		}else{
+			var mod=0;
 			var r =r.substring(0,4); 
 		}
 		if (x==1)
@@ -1736,10 +1785,19 @@ function capdep(clicked_id)
 			var dd=r.charAt(3)
 			var mm =r.substring(0,2);
 			
+			alert(dd);
 			if (dd=="")
-			{
-				dd=0	
+			{	
+				//mod=mod.toString();
+				dd=mod;	
 			}
+			
+//			if (mod=="")
+	//		{
+		//		dd=0;	
+			//}
+			
+			
 			if (dd==1)
 			{
 				document.getElementById("valortot").innerHTML =mm+" SEMANAS Y "+dd+" DIA";	
