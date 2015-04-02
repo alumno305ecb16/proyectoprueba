@@ -808,10 +808,10 @@ function pab(clicked_id)
 <script language="javascript">
 function r(paguina)
 {
-	bot=document.getElementById("botfin").text
-	//alert(bot);
-	if (bot=="SEGUIR")
-	{
+	
+				var bot=document.getElementById("botfin").text
+			if (bot=="SEGUIR")
+			{
 				
 				var a=document.getElementById("p").innerHTML;
 				var b=document.getElementById("t").innerHTML;
@@ -822,25 +822,30 @@ function r(paguina)
 				var suma=parseInt(a)+parseInt(b)+parseInt(c)+parseInt(d)+parseInt(e);
 				document.getElementById("valortot").innerHTML=suma;
 				
-		window.location=("#pagdep6");	
+				window.location=("#pagdep6");	
 				document.getElementById("botfin").innerHTML="INICIO";		
-	}else{
+			}else{
 	
-	window.location=('#page');
-//	a=document.getElementById("valortotal").innerHTML =0;
-//	a=document.getElementById("valortot").innerHTML =0;
-//		document.getElementById("t").innerHTML=0;
-//		document.getElementById("f50").innerHTML=0;
-//		document.getElementById("tp").innerHTML=0;
-//		document.getElementById("sg").innerHTML=0;
-//		document.getElementById("pp").innerHTML=0;
-//		document.getElementById("sb").innerHTML=0;
-//		document.getElementById("p").innerHTML=0;
-//		document.getElementById("parte").innerHTML="";
-	}
-		
+				window.location=('#page');
+
+			}
+
+	
 }
 </script>
+<!-----------------------------------SCRIPT REGRESAR------------------------------------------------------------->
+<script>
+function confirmar()
+{
+	var confirmar=confirm("¿DESEAS REGRESAR AL INICIO?")
+	if(confirmar)
+	{
+		alert("SI");
+	window.location=('#page');	
+	}
+}
+</script>
+<!------------------------------------------limpiar capurro------------------------------------------------------->
 <script>
 function limpiarcapurro()
 {
@@ -857,7 +862,7 @@ function limpiarcapurro()
 }
 </script>
 
-		<!-- DEPRIMIDO-->
+		<!--------------------------------------------- DEPRIMIDO-------------------------------------------------->
 
 		        
         <div data-role="page" id="pagdep" data-theme="a">
@@ -926,11 +931,11 @@ function limpiarcapurro()
      
 </center>
 
-<!-- DEP2 -->
+<!-----------------------------------------------TAMAÑO DE GLANDULA ------------------------------------------------>
 
  <div data-role="page" id="pagdep2" data-theme="a">
 	<div data-role="header" data-theme="a">
-        		<p align="center">TAMAÑO DE GLÁNDULA</p>
+        		<p align="center">TAMAÑO DE LA GLÁNDULA</p>
      </div>
      
 
@@ -942,7 +947,7 @@ function limpiarcapurro()
             <div align="center">  <a href="#pagdep" class="botonhoja" onClick="reply_click(this.id)" id="atras2">ATRAS</a></div>
            </td>
            <td>
-            <div align="right"><a href="#page" class="botonhoja" onClick="r()">REGRESAR</a></div>
+            <div align="right"><a href="javascript:confirmar()" class="botonhoja">REGRESAR</a></div>
            </td>
            </tr>
            
@@ -998,7 +1003,7 @@ function limpiarcapurro()
      
 </center>     
 
-<!-- DEP 3-->
+<!--------------------------------------------FORMACION DEL PEZON 3----------------------------------------------->
 
 <div data-role="page" id="pagdep3" data-theme="a">
 	<div data-role="header" data-theme="a">
@@ -1014,7 +1019,7 @@ function limpiarcapurro()
          <div align="center">  <a href="#pagdep2" class="botonhoja" onClick="reply_click(this.id)" id="atras3">ATRAS</a></div>
         </td>
         <td>
-       <div align="right"> <a href="#page" class="botonhoja" onClick="r()">REGRESAR</a></div>
+       <div align="right"> <a href="javascript:confirmar()" class="botonhoja">REGRESAR</a></div>
         </td>
         
         </tr>
@@ -1071,7 +1076,7 @@ function limpiarcapurro()
      
 </center>     
 
-<!-- DEP 4-->
+<!--------------------------------------------TEXTURA DE LA PIEL 4------------------------------------------------>
 
  <div data-role="page" id="pagdep4" data-theme="a">
 	<div data-role="header" data-theme="a">
@@ -1087,7 +1092,7 @@ function limpiarcapurro()
            <div align="center">  <a href="#pagdep3" class="botonhoja" onClick="reply_click(this.id)" id="atras4">ATRAS</a></div>
            </td>
            <td>
-            <div align="right"><a href="#page" class="botonhoja" onClick="r()">REGRESAR</a></div>
+            <div align="right"><a href="javascript:confirmar()" class="botonhoja">REGRESAR</a></div>
            </td>
            </tr>
            <td>
@@ -1151,7 +1156,7 @@ function limpiarcapurro()
 </center>     
   
   
-  <!-- DEP5 -->
+  <!------------------------------------------PLIEGUES PLANTALES 5------------------------------------------------->
 
 <div data-role="page" id="pagdep5" data-theme="a">
 	<div data-role="header" data-theme="a">
@@ -1166,7 +1171,7 @@ function limpiarcapurro()
        <div align="center">  <a href="#pagdep4" class="botonhoja" onClick="reply_click(this.id)" id="atras5">ATRAS</a></div>
        </td>
        <td>
-      <div align="right"> <a href="#page" class="botonhoja" onClick="r()">REGRESAR</a></div>
+      <div align="right"> <a href="javascript:confirmar()" class="botonhoja">REGRESAR</a></div>
        </td>
        </tr>
            <tr>
@@ -1228,7 +1233,7 @@ function limpiarcapurro()
      </div> 
 </center>     
 
-<!-- DEP 6-->
+<!--------------------------------------------SIGNO DE LA BUFANDA 6--------------------------------------------->
 
 
  <div data-role="page" id="pagdep6" data-theme="a">
@@ -1292,7 +1297,7 @@ function limpiarcapurro()
      
 </center>     
   
-  <!-- 7 DEP -->
+  <!-------------------------------------------SIGNO CABEZA EN GOTA 7---------------------------------------------->
     
      <div data-role="page" id="pagdep7" data-theme="a">
 	<div data-role="header" data-theme="a">
@@ -1307,7 +1312,7 @@ function limpiarcapurro()
          <div align="center">  <a href="#pagdep6" class="botonhoja" onClick="reply_click(this.id)" id="atras7">ATRAS</a></div>
         </td>
         <td>
-        <div align="right"><a href="#page" class="botonhoja" onClick="r()">REGRESAR</a></div>
+        <div align="right"><a href="javascript:confirmar()" class="botonhoja">REGRESAR</a></div>
         </td>
         </tr>
            <tr>
@@ -1364,7 +1369,7 @@ function limpiarcapurro()
      
 </center>     
         
-   <!-- DEP RESILTADO-->     
+   <!-----------------------------------RESULTADO CAPURRO------------------------------------------------------->     
         
         <div data-role="page" id="pagresdep" data-theme="a">
 	<div data-role="header" data-theme="a">
@@ -1396,7 +1401,7 @@ function limpiarcapurro()
 	</center>
 
 
-<!--ATRAS -->
+<!----------------------------------- CAPURRO ATRAS --------------------------------------------------------->
 
 
 <script type="text/javascript">
@@ -1506,7 +1511,7 @@ function reply_click(clicked_id)
 
 
 
-<!-- Script seprimido-->
+<!----------------------------------------------------- SCRIPT CAPURRO SUMA--------------------------------------->
 
 <script type="text/livescript">
 function capdep(clicked_id)
@@ -1851,7 +1856,7 @@ function capdep(clicked_id)
       		     <div align="center">  <a href="#pagsildis" class="botonhoja" onClick="reply_click(this.id)" id="atras11">ATRAS</a></div>
            </td>
            <td>
-            <div align="right"><a href="#page" class="botonhoja" onClick="r()">REGRESAR</a></div>
+            <div align="right"><a href="javascript:confirmar()" class="botonhoja">REGRESAR</a></div>
            </td>
            </tr>
            
@@ -1904,7 +1909,7 @@ function capdep(clicked_id)
             <div align="center">  <a href="#pagsilret" class="botonhoja" onClick="reply_click(this.id)" id="atras11">ATRAS</a></div>
             </td>
             <td>
-				 <div align="right"><a href="#page" class="botonhoja" onClick="r()">REGRESAR</a></div>            
+				 <div align="right"><a href="javascript:confirmar()" class="botonhoja">REGRESAR</a></div>            
             </td>
             </tr>
             
@@ -1959,7 +1964,7 @@ function capdep(clicked_id)
                  	<div align="center">  <a href="#pagsilretrea" class="botonhoja" onClick="reply_click(this.id)" id="atras11">ATRAS</a></div>
                 </td>
                 <td>
-                	 <div align="right"><a href="#page" class="botonhoja" onClick="r()">REGRESAR</a></div>  
+                	 <div align="right"><a href="javascript:confirmar()" class="botonhoja">REGRESAR</a></div>  
                 </td>
                 </tr>
                 
@@ -2016,7 +2021,7 @@ function capdep(clicked_id)
                 	<div align="center">  <a href="#pagsilale" class="botonhoja" onClick="reply_click(this.id)" id="atras11">ATRAS</a></div>
                 </td>
                 <td>
-                <div align="right"><a href="#page" class="botonhoja" onClick="r()">REGRESAR</a></div>  
+                <div align="right"><a href="javascript:confirmar()" class="botonhoja">REGRESAR</a></div>  
                 </td>
                 </tr>
                 
@@ -2071,13 +2076,13 @@ function capdep(clicked_id)
         <center>
         <a href="#pagsilquejido" class="botonhoja" onClick="reply_click(this.id)" id="atras11">ATRAS</a>
         
-        <a href="#page" class="botonhoja" onClick="r()">REGRESAR</a>
+        <a href="javascript:confirmar()" class="botonhoja">REGRESAR</a>
         </center>
     
     	<font color="#FFFFFF"><h3><div align="center" style="background-color:#F00" id="silrango"></div></h3></font>
     </div>
                 
-<!-----------------------------------SUMA JAVASCRIPT------------------------------------------------------------------>
+<!-----------------------------------SUMA SILVERMAN JAVASCRIPT------------------------------------------------------>
 <script type="text/livescript">
 function sumapuntossilverman(clicked_id)
 
